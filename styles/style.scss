@@ -1,49 +1,221 @@
 @font-face {
-  font-family: 'Abril Fatface';
-  src: url('../fonts/AbrilFatface-Regular.ttf');
-  font-family:'Glacial Indifference' ;
-  src:url('../fonts/GlacialIndifference-Regular.otf'),url('../fonts/GlacialIndifference-Bold.otf'),url('../fonts/GlacialIndifference-Italic.otf');
+  font-family: "Abril Fatface";
+  src: url("../fonts/AbrilFatface-Regular.ttf");
+  font-family: "Glacial Indifference";
+  src: url("../fonts/GlacialIndifference-Regular.otf"),
+    url("../fonts/GlacialIndifference-Bold.otf"),
+    url("../fonts/GlacialIndifference-Italic.otf");
 }
 
-$primary-color: #F4698F;
-$white:#ffff;
+$primary-color: #f4698f;
+$secondary-color: #d9f3b6;
+$white: #fff;
+$black: #000;
 
-*{
+* {
   margin: 0;
   padding: 0;
   list-style: none;
-  color: $white;
 }
 
-html{
+html {
   box-sizing: border-box;
-  font-family:'Glacial Indifference', cursive;
+  font-family: "Glacial Indifference", cursive;
 }
 
-header{
+header {
   position: absolute;
-  top:0;
+  top: 0;
   width: 100vw;
   height: 10vh;
-}
 
-header nav{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-}
+  nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 0.5rem;
 
-.nav-menu{
-    display: none;
+    .nav-logo {
+      justify-self: start;
+    }
+    .nav-social-icon ul {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .nav-menu ul {
+      display: none;
+    }
   }
+}
 
-
-#nosotros
-{
+#nosotros {
+  color: $white;
   background-color: $primary-color;
-  background-image: url('../images/bg-gradiente.png');
+  background-image: url("../images/bg-gradiente.png");
   background-size: 100vw 100vh;
   width: 100vw;
   height: 100vh;
   padding-top: 10vh;
+}
+
+#trabajos {
+  width: 100wh;
+  height: 100vh;
+  background-color: $secondary-color;
+  color: $black;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+
+  h2 {
+    font-size: 18px;
+    line-height: 38px;
+  }
+
+  h3 {
+    font-size: 12px;
+    line-height: 38px;
+  }
+
+  .container-job {
+    position: relative;
+    border-radius: 16px;
+    .job__description {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 30px;
+      background-color: $white;
+      border-radius: 0 0 16px 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      span {
+        margin-left: 16px;
+        font-size: 8px;
+      }
+      button {
+        margin-right: 16px;
+        width: 56px;
+        height: 18px;
+
+        border: 1px solid $primary-color;
+        border-radius: 8px;
+        background-color: $white;
+        font-family: "Glacial Indifference", cursive;
+        font-size: 10px;
+      }
+    }
+    .btn {
+      position: absolute;
+      top: 40%;
+    }
+    .btn-left {
+      left: -40px;
+    }
+    .btn-right {
+      right: -40px;
+    }
+  }
+  hr {
+    width: 50%;
+    height: 4px;
+    border: 0.5px solid $primary-color;
+    border-radius: 24px;
+  }
+}
+
+#contacto {
+  padding-top: 40px;
+  background: linear-gradient(
+    270.64deg,
+    #ff9e7f -13.83%,
+    #f4698f 18.14%,
+    rgba(208, 240, 164, 0.8) 159.82%
+  );
+  width: 100vw;
+  min-height: 100vh;
+  color: $white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 16px;
+  align-items: center;
+  font-weight: 400;
+  img {
+    width: 40px;
+    height: 40px;
+  }
+
+  p {
+    font-size: 10px;
+  }
+  h3 {
+    font-size: 16px;
+  }
+
+  form {
+    padding-top: 16px;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+
+    gap: 8px;
+
+    label {
+      font-size: 10px;
+    }
+    input {
+      min-height: 24px;
+      color: $white;
+      border: 1px solid $white;
+      background-color: #00000000;
+      border-radius: 16px;
+    }
+    .form-text {
+      height: 100px;
+    }
+
+    button {
+      align-self: center;
+      width: 128px;
+      height: 32px;
+      margin-top: 16px;
+      color: $white;
+      background-color: $primary-color;
+      padding: 8px;
+      border: none;
+      border-radius: 12px;
+      font-size: 10px;
+    }
+  }
+  .nav-social-icon {
+    margin-top: 24px;
+    text-align: center;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    gap:16px;
+    ul {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      
+      img{
+        height: 12px;
+      }
+    }
+    hr {
+      width: 100%;
+      height: 4px;
+      border: 0.5px solid $white;
+      border-radius: 24px;
+    }
+  }
 }

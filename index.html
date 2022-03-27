@@ -5,7 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>DIGITALMIND</title>
+    
     <link rel="stylesheet" href="./styles/style.css" />
+    <script src="./index.js"></script>
   </head>
   <body>
     <header>
@@ -131,15 +133,28 @@
           <h2>Nuestro Portfolio</h2>
           <h3>Trabajamos con excelentes profesionales</h3>
         </div>
-        <article class="container-job">
-          <img src="./images/job1.png" alt="" />
-          <div class="job__description">
-            <span>Fotografía</span>
-            <button>Ver más</button>
+        <article class="carousel">
+          <div class="carousel__slider carousel__slider--1 ">
+            <div class="job__description">
+              <span>Fotografía</span>
+              <button>Ver más</button>
+            </div>
           </div>
-          <img class="btn btn-left" src="./icons/left.svg" alt="" />
-          <img class="btn btn-right" src="./icons/right.svg" alt="" />
+          <div class="carousel__slider carousel__slider--1">
+            <div class="job__description">
+              <span>Fotografía</span>
+              <button>Ver más</button>
+            </div>
+          </div>
+          <div class="carousel__slider carousel__slider--1">
+            <div class="job__description">
+              <span>Fotografía</span>
+              <button>Ver más</button>
+            </div>
+          </div>
         </article>
+        <img class="btn prev"  src="./icons/right.svg" alt="" />
+        <img class="btn next"  src="./icons/left.svg" alt="" />
         <hr />
       </section>
       <section id="contacto">
@@ -161,14 +176,31 @@
         <div class="nav-social-icon">
           <p>Nuestras redes</p>
           <ul>
-            <li><a href="https://www.facebook.com/somosdigitalmind" target="_blank"><img src="./icons/facebook.svg" alt="facebook" /></a></li>
-            <li><a href="https://www.instagram.com/digitalmind.ar/"  target="_blank"><img src="./icons/instagram.svg" alt="instagram" /></a></li>
-            <li><a href="https://wa.me/5491141564120/?text=Hola!%20Me%20interesa%20sus%20servicios"  target="_blank"><img src="./icons/whatsapp.svg" alt="whatsapp" /></a></li>
+            <li>
+              <a
+                href="https://www.facebook.com/somosdigitalmind"
+                target="_blank"
+                ><img src="./icons/facebook.svg" alt="facebook"
+              /></a>
+            </li>
+            <li>
+              <a
+                href="https://www.instagram.com/digitalmind.ar/"
+                target="_blank"
+                ><img src="./icons/instagram.svg" alt="instagram"
+              /></a>
+            </li>
+            <li>
+              <a
+                href="https://wa.me/5491141564120/?text=Hola!%20Me%20interesa%20sus%20servicios"
+                target="_blank"
+                ><img src="./icons/whatsapp.svg" alt="whatsapp"
+              /></a>
+            </li>
           </ul>
           <hr />
         </div>
       </section>
     </main>
-    <script src="./index.js"></script>
   </body>
 </html>

@@ -74,7 +74,8 @@ header nav .nav-menu ul {
 }
 
 #trabajos {
-  width: 100wh;
+  position: relative;
+  width: 100vw;
   height: 100vh;
   background-color: #d9f3b6;
   color: #000;
@@ -103,12 +104,29 @@ header nav .nav-menu ul {
   line-height: 38px;
 }
 
-#trabajos .container-job {
+#trabajos .carousel {
+  width: 200px;
+  height: 200px;
+  -ms-scroll-snap-type: x mandatory;
+      scroll-snap-type: x mandatory;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow-x: auto;
   position: relative;
   border-radius: 16px;
 }
 
-#trabajos .container-job .job__description {
+#trabajos .carousel .carousel__slider {
+  height: 200px;
+  min-width: 200px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  scroll-snap-align: start;
+}
+
+#trabajos .carousel .carousel__slider .job__description {
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -126,12 +144,12 @@ header nav .nav-menu ul {
           align-items: center;
 }
 
-#trabajos .container-job .job__description span {
+#trabajos .carousel .carousel__slider .job__description span {
   margin-left: 16px;
   font-size: 8px;
 }
 
-#trabajos .container-job .job__description button {
+#trabajos .carousel .carousel__slider .job__description button {
   margin-right: 16px;
   width: 56px;
   height: 18px;
@@ -142,17 +160,29 @@ header nav .nav-menu ul {
   font-size: 10px;
 }
 
-#trabajos .container-job .btn {
+#trabajos .carousel .carousel__slider--1 {
+  background-image: url("../images/job1.png");
+}
+
+#trabajos .carousel .carousel__slider--2 {
+  background-image: url("../images/job2.png");
+}
+
+#trabajos .carousel .carousel__slider--3 {
+  background-image: url("../images/job1.png");
+}
+
+#trabajos .btn {
   position: absolute;
-  top: 40%;
+  top: 50%;
 }
 
-#trabajos .container-job .btn-left {
-  left: -40px;
+#trabajos .prev {
+  left: 80%;
 }
 
-#trabajos .container-job .btn-right {
-  right: -40px;
+#trabajos .next {
+  right: 80%;
 }
 
 #trabajos hr {
@@ -242,6 +272,7 @@ header nav .nav-menu ul {
 }
 
 #contacto .nav-social-icon {
+  width: 100%;
   margin-top: 24px;
   text-align: center;
   height: 100px;
@@ -263,17 +294,20 @@ header nav .nav-menu ul {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 16px;
 }
 
 #contacto .nav-social-icon ul img {
+  width: 12px;
   height: 12px;
 }
 
 #contacto .nav-social-icon hr {
-  width: 100%;
+  margin: 0 auto;
+  width: 50%;
   height: 4px;
   border: 0.5px solid #fff;
   border-radius: 24px;

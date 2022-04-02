@@ -23,33 +23,42 @@ html {
   font-family: "Glacial Indifference", cursive;
 }
 
-header {
+.header {
+  align-items: center;
   position: absolute;
-  top: 0;
-  width: 100vw;
-  height: 10vh;
+  width: 100%;
+  display: flex;
+  flex: 1;
+  margin: 15px;
 
-  nav {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    padding-top: 0.5rem;
+  .nav-logo {
+    width: 20%;
+    order: 1;
+  }
 
-    .nav-logo {
-      justify-self: start;
-    }
-    .nav-social-icon ul {
+  .nav-menu {
+    order: 2;
+    width: 100%;
+
+    ul {
       display: flex;
-      flex-direction: row;
-      align-items: center;
-      gap: 1rem;
-    }
+      justify-content: center;
 
-    .nav-menu ul {
-      display: none;
+      li {
+        padding: 15px;
+      }
     }
   }
+
+  .nav-menu_contact {
+    width: 20%;
+    order: 3;
+
+    li {
+      padding: 15px;
+    }
+  }
+
 }
 
 #nosotros {
@@ -92,6 +101,7 @@ header {
     overflow-x: auto;
     position: relative;
     border-radius: 16px;
+
     .carousel__slider {
       height: 200px;
       min-width: 200px;
@@ -99,6 +109,7 @@ header {
       background-size: cover;
       background-position: center;
       scroll-snap-align: start;
+
       .job__description {
         position: absolute;
         bottom: 0;
@@ -109,10 +120,12 @@ header {
         display: flex;
         justify-content: space-between;
         align-items: center;
+
         span {
           margin-left: 16px;
           font-size: 8px;
         }
+
         button {
           margin-right: 16px;
           width: 56px;
@@ -139,16 +152,20 @@ header {
       background-image: url("../images/job1.png");
     }
   }
+
   .btn {
     position: absolute;
     top: 50%;
   }
+
   .prev {
     left: 80%;
   }
+
   .next {
     right: 80%;
   }
+
   hr {
     width: 50%;
     height: 4px;
@@ -159,12 +176,10 @@ header {
 
 #contacto {
   padding-top: 40px;
-  background: linear-gradient(
-    270.64deg,
-    #ff9e7f -13.83%,
-    #f4698f 18.14%,
-    rgba(208, 240, 164, 0.8) 159.82%
-  );
+  background: linear-gradient(270.64deg,
+      #ff9e7f -13.83%,
+      #f4698f 18.14%,
+      rgba(208, 240, 164, 0.8) 159.82%);
   width: 100vw;
   min-height: 100vh;
   color: $white;
@@ -174,6 +189,7 @@ header {
   gap: 16px;
   align-items: center;
   font-weight: 400;
+
   img {
     width: 40px;
     height: 40px;
@@ -182,6 +198,7 @@ header {
   p {
     font-size: 10px;
   }
+
   h3 {
     font-size: 16px;
   }
@@ -197,6 +214,7 @@ header {
     label {
       font-size: 10px;
     }
+
     input {
       min-height: 24px;
       color: $white;
@@ -204,6 +222,7 @@ header {
       background-color: #00000000;
       border-radius: 16px;
     }
+
     .form-text {
       height: 100px;
     }
@@ -221,6 +240,7 @@ header {
       font-size: 10px;
     }
   }
+
   .nav-social-icon {
     width: 100%;
     margin-top: 24px;
@@ -229,16 +249,19 @@ header {
     display: flex;
     flex-direction: column;
     gap: 16px;
+
     ul {
       display: flex;
       flex-direction: row;
       justify-content: center;
       gap: 16px;
+
       img {
         width: 12px;
         height: 12px;
       }
     }
+
     hr {
       margin: 0 auto;
       width: 50%;

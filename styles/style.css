@@ -97,15 +97,21 @@ header nav .nav-menu ul {
 #trabajos h2 {
   font-size: 18px;
   line-height: 38px;
+  font-weight: normal;
 }
 
 #trabajos h3 {
   font-size: 12px;
+  font-weight: normal;
   line-height: 38px;
 }
 
-#trabajos .carousel {
-  width: 200px;
+#trabajos .job-container {
+  position: relative;
+}
+
+#trabajos .job-container .carousel {
+  width: 220px;
   height: 200px;
   -ms-scroll-snap-type: x mandatory;
       scroll-snap-type: x mandatory;
@@ -117,19 +123,20 @@ header nav .nav-menu ul {
   border-radius: 16px;
 }
 
-#trabajos .carousel .carousel__slider {
+#trabajos .job-container .carousel .carousel__slider {
   height: 200px;
-  min-width: 200px;
+  min-width: 220px;
+  background-color: #fff;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   scroll-snap-align: start;
 }
 
-#trabajos .carousel .carousel__slider .job__description {
+#trabajos .job-container .carousel .carousel__slider .job__description {
   position: absolute;
   bottom: 0;
-  width: 100%;
+  width: 220px;
   height: 30px;
   background-color: #fff;
   border-radius: 0 0 16px 16px;
@@ -144,15 +151,17 @@ header nav .nav-menu ul {
           align-items: center;
 }
 
-#trabajos .carousel .carousel__slider .job__description span {
+#trabajos .job-container .carousel .carousel__slider .job__description span {
+  text-align: start;
   margin-left: 16px;
+  width: 100%;
   font-size: 8px;
 }
 
-#trabajos .carousel .carousel__slider .job__description button {
+#trabajos .job-container .carousel .carousel__slider .job__description button {
   margin-right: 16px;
-  width: 56px;
-  height: 18px;
+  width: 70px;
+  height: 20px;
   border: 1px solid #f4698f;
   border-radius: 8px;
   background-color: #fff;
@@ -160,29 +169,38 @@ header nav .nav-menu ul {
   font-size: 10px;
 }
 
-#trabajos .carousel .carousel__slider--1 {
+#trabajos .job-container .carousel .carousel__slider--1 {
   background-image: url("../images/job1.png");
 }
 
-#trabajos .carousel .carousel__slider--2 {
+#trabajos .job-container .carousel .carousel__slider--2 {
   background-image: url("../images/job2.png");
 }
 
-#trabajos .carousel .carousel__slider--3 {
-  background-image: url("../images/job1.png");
+#trabajos .job-container .carousel .carousel__slider--3 {
+  background-image: url("../images/job3.png");
 }
 
-#trabajos .btn {
+#trabajos .job-container .carousel .carousel__slider--4 {
+  background-image: url("../images/job4.png");
+}
+
+#trabajos .job-container .carousel .carousel__slider--5 {
+  background-image: url("../images/job5.png");
+  background-size: 90px;
+}
+
+#trabajos .job-container .btn {
   position: absolute;
-  top: 50%;
+  top: 40%;
 }
 
-#trabajos .prev {
-  left: 80%;
+#trabajos .job-container .prev {
+  left: -40px;
 }
 
-#trabajos .next {
-  right: 80%;
+#trabajos .job-container .next {
+  right: -40px;
 }
 
 #trabajos hr {

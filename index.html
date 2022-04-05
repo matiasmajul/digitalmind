@@ -10,6 +10,21 @@
     <script defer src="./index.js"></script>
   </head>
   <body>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        loading = document.querySelector(".loading");
+
+        setTimeout(function () {
+          loading.classList.remove("show");
+        }, 1500);
+        setTimeout(function () {
+          loading.remove();
+        }, 2000);
+      });
+    </script>
+    <div class="loading show">
+      <div class="spin"></div>
+    </div>
     <header>
       <nav>
         <div class="nav-logo">
@@ -135,35 +150,10 @@
         </div>
         <div class="job-container">
           <article class="carousel">
-            <div class="carousel__slider carousel__slider--1">
-              <div class="job__description">
-                <span>Fotografía</span>
-                <button>Ver más</button>
-              </div>
-            </div>
-            <div class="carousel__slider carousel__slider--2">
-              <div class="job__description">
-                <span>Fotografía</span>
-                <button>Ver más</button>
-              </div>
-            </div>
-            <div class="carousel__slider carousel__slider--3">
-              <div class="job__description">
-                <span>Diseño Gráfico</span>
-                <button>Ver más</button>
-              </div>
-            </div>
-            <div class="carousel__slider carousel__slider--4">
-              <div class="job__description">
-                <span>Community Management</span>
-                <button>Ver más</button>
-              </div>
-            </div>
-            <div class="carousel__slider carousel__slider--5">
-              <div class="job__description">
-                <span>Diseño & Community Management</span>
-                <button>Ver más</button>
-              </div>
+            <div class="job-image"></div>
+            <div class="job__description">
+              <span>Fotografía</span>
+              <button>Ver más</button>
             </div>
           </article>
           <img class="btn next" src="./icons/right.svg" alt="" />
@@ -172,11 +162,14 @@
         <hr />
       </section>
       <section id="contacto">
-        <p>No dudes en consultarnos</p>
-        <img src="./icons/logo.svg" alt="logo" />
-        <h3>Compartinos tu proyecto.</h3>
-        <h3>Y encontrá excelentes resultados.</h3>
-        <form>
+        <p class="c1r1">No dudes en consultarnos</p>
+        <div class="c1r2">
+          <img src="./icons/logo.svg" alt="logo" />
+        </div>
+        <h3 class="c1r3">Compartinos tu proyecto.</h3>
+        <h3 class="c1r4">Y encontrá excelentes resultados.</h3>
+        <form class="c2r1">
+          <h4>Contacto</h4>
           <label for="nombre"> Nombre </label>
           <input type="text" name="nombre" id="nombre" />
           <label for="email"> Email </label>
@@ -187,7 +180,7 @@
           <input class="form-text" type="text" name="" id="" />
           <button>ENVIAR MENSAJE</button>
         </form>
-        <div class="nav-social-icon">
+        <div class="nav-social-icon c1r6">
           <p>Nuestras redes</p>
           <ul>
             <li>
@@ -212,8 +205,8 @@
               /></a>
             </li>
           </ul>
-          <hr />
         </div>
+        <hr class="c1r5" />
       </section>
     </main>
   </body>

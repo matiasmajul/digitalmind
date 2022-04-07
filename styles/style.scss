@@ -112,6 +112,8 @@ header {
         width: 100%;
         height: 100%;
         background-size: cover;
+        transition: 1s background-image ease;
+
       }
       .job__description {
         position: absolute;
@@ -234,8 +236,6 @@ header {
         background-color: $primary-color;
       }
     }
-
-    
 
     button {
       align-self: center;
@@ -374,53 +374,126 @@ header {
   }
 }
 
-/* Escritorio pequeño / tablet */
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 780px) {
   #trabajos {
     h2 {
       font-size: 40px;
+      line-height: 38px;
     }
 
     h3 {
       font-size: 24px;
+      line-height: 38px;
     }
 
     .job-container {
       position: relative;
-
+      display: flex;
+      align-items: center;
       .carousel {
-        width: 20rem;
-        height: 18rem;
+        border-radius: 26px;
+        z-index: 1;
+        width: 30vw;
+        height: 50vh;
+        .job-image {
+          width: 100%;
+          height: 100%;
 
+        }
         .job__description {
-          width: 20rem;
-          height: 2.5rem;
+          width: 30vw;
+          height: 4rem;
 
           span {
-            font-size: 10px;
+            font-size: 16px;
+            line-height: 38px;
           }
           button {
-            width: 6.5rem;
-            height: 1.5rem;
-
-            font-size: 12px;
+            width: 8.5rem;
+            height: 2.5rem;
+            font-size: 20px;
+            line-height: 38px;
           }
         }
       }
+
       .btn {
-        width: 2rem;
-        height: 4rem;
+        width: 3rem;
+        height: 5rem;
+        position: absolute;
+        z-index: 1;
       }
 
       .prev {
-        left: -70px;
+        left: -30vw;
       }
       .next {
-        right: -70px;
+        right: -30vw;
+      }
+
+      .carousel-after,
+      .carousel-before {
+        border-radius: 26px;
+        position: absolute;
+        width: 25vw;
+        height: 45vh;
+        z-index: 0;
+
+        .job__description {
+          position: absolute;
+          bottom: 0;
+          width: 25vw;
+          height: 4rem;
+          background-color: $white;
+          border-radius: 0 0 1rem 1rem;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          span {
+            text-align: start;
+            margin-left: 1rem;
+            width: 100%;
+            font-size: 16px;
+            line-height: 38px;
+          }
+          button {
+            width: 8.5rem;
+            height: 2.5rem;
+            font-size: 20px;
+            line-height: 38px;
+            margin-right: 1rem;
+            border: 1px solid $primary-color;
+            border-radius: 0.5rem;
+            background-color: $white;
+            font-family: "Glacial Indifference", cursive;
+          }
+        }
+      }
+
+      .carousel-after {
+        left: 20vw;
+        .after-image {
+          width: 100%;
+          height: 100%;
+          background-size: cover;
+          transition: 1s background-image ease;
+
+        }
+      }
+
+      .carousel-before {
+        right: 20vw;
+        .before-image {
+          width: 100%;
+          height: 100%;
+          background-size: cover;
+          transition: 1s background-image ease;
+
+        }
       }
     }
     hr {
-      width: 18rem;
+      width: 25rem;
     }
   }
 
@@ -449,7 +522,6 @@ header {
     .c1r4 {
       grid-area: 4 / 1 / 5 / 2;
       align-self: start;
-
     }
     .c1r5 {
       grid-area: 5 / 1 / 6 / 2;

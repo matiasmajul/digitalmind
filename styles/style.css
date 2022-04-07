@@ -18,6 +18,14 @@ html {
   font-family: "Glacial Indifference", cursive;
 }
 
+p,
+h1,
+h2,
+h3,
+h4 {
+  font-weight: normal;
+}
+
 header {
   position: absolute;
   top: 0;
@@ -191,7 +199,6 @@ header nav .nav-menu ul {
   padding-top: 40px;
   background: linear-gradient(270.64deg, #ff9e7f -13.83%, #f4698f 18.14%, rgba(208, 240, 164, 0.8) 159.82%);
   width: 100vw;
-  min-height: 100vh;
   color: #fff;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -200,9 +207,7 @@ header nav .nav-menu ul {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  gap: 16px;
+  gap: 2rem;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -219,11 +224,10 @@ header nav .nav-menu ul {
 }
 
 #contacto h3 {
-  font-size: 16px;
+  font-size: 1rem;
 }
 
 #contacto form {
-  padding-top: 16px;
   width: 70%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -249,10 +253,36 @@ header nav .nav-menu ul {
   border: 1px solid #fff;
   background-color: #00000000;
   border-radius: 16px;
+  padding-left: 0.5rem;
+  font-family: "Glacial Indifference", cursive;
+  font-weight: normal;
 }
 
-#contacto form .form-text {
-  height: 100px;
+#contacto form input:focus {
+  outline: none;
+  border-radius: 1rem;
+  border: 1px solid #d9f3b6;
+  background-color: #f4698f;
+}
+
+#contacto form textarea {
+  height: 20%;
+  color: #fff;
+  border: 1px solid #fff;
+  background-color: #00000000;
+  border-radius: 16px;
+  padding: 0.5rem;
+  text-shadow: none;
+  font-family: "Glacial Indifference", cursive;
+  font-weight: normal;
+  resize: none;
+}
+
+#contacto form textarea:focus {
+  outline: none;
+  border-radius: 1rem;
+  border: 1px solid #d9f3b6;
+  background-color: #f4698f;
 }
 
 #contacto form button {
@@ -261,7 +291,7 @@ header nav .nav-menu ul {
       align-self: center;
   width: 128px;
   height: 32px;
-  margin-top: 16px;
+  margin-top: 2rem;
   color: #fff;
   background-color: #f4698f;
   padding: 8px;
@@ -272,9 +302,7 @@ header nav .nav-menu ul {
 
 #contacto .nav-social-icon {
   width: 100%;
-  margin-top: 24px;
   text-align: center;
-  height: 100px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -304,8 +332,9 @@ header nav .nav-menu ul {
   height: 12px;
 }
 
-#contacto .nav-social-icon hr {
+#contacto hr {
   margin: 0 auto;
+  margin-bottom: 2rem;
   width: 50%;
   height: 4px;
   border: 0.5px solid #fff;
@@ -479,9 +508,9 @@ header nav .nav-menu ul {
     width: 100vw;
     height: 100vh;
     background-color: #fff;
-    text-align: center;
     display: -ms-grid;
     display: grid;
+    text-align: center;
     -ms-grid-columns: (50%)[2];
         grid-template-columns: repeat(2, 50%);
     -ms-grid-rows: (1fr)[6];
@@ -516,6 +545,9 @@ header nav .nav-menu ul {
     -ms-grid-column: 1;
     -ms-grid-column-span: 1;
     grid-area: 4 / 1 / 5 / 2;
+    -ms-flex-item-align: start;
+        -ms-grid-row-align: start;
+        align-self: start;
   }
   #contacto .c1r5 {
     -ms-grid-row: 5;
@@ -523,7 +555,6 @@ header nav .nav-menu ul {
     -ms-grid-column: 1;
     -ms-grid-column-span: 1;
     grid-area: 5 / 1 / 6 / 2;
-    width: 50%;
   }
   #contacto .c2r1 {
     -ms-grid-row: 1;
@@ -531,23 +562,85 @@ header nav .nav-menu ul {
     -ms-grid-column: 2;
     -ms-grid-column-span: 1;
     grid-area: 1 / 2 / 7 / 3;
+  }
+  #contacto form {
     background-color: #fff;
     width: 100%;
     height: 100%;
-    color: #000;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    gap: 0;
+    color: #000;
   }
-  #contacto .c2r1 h4 {
+  #contacto form h4 {
+    font-size: 40px;
+    line-height: 38px;
     visibility: visible;
+    padding-bottom: 1rem;
   }
-  #contacto .c2r1 input {
+  #contacto form label {
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+    padding-left: 15%;
+    font-size: 20px;
+    line-height: 41px;
+    padding-top: 0.5rem;
+  }
+  #contacto form input {
+    color: #000;
+    width: 70%;
+    font-size: 20px;
+    line-height: 2rem;
+    border: 1px solid #f4698f;
+    padding-left: 1rem;
+  }
+  #contacto form input:focus {
+    border: 2px solid #f4698f;
+    background-color: #fff;
+  }
+  #contacto form textarea {
+    color: #000;
     width: 70%;
     border: 1px solid #f4698f;
+    font-size: 20px;
+    line-height: 1rem;
+  }
+  #contacto form textarea:focus {
+    border: 2px solid #f4698f;
+    background-color: #fff;
+  }
+  #contacto form button {
+    width: 16rem;
+    height: 3rem;
+    border-radius: 24px;
+    font-size: 16px;
+  }
+  #contacto p {
+    font-size: 30px;
+  }
+  #contacto img {
+    width: 90px;
+    height: 90px;
+  }
+  #contacto h3 {
+    font-size: 35px;
+  }
+  #contacto .nav-social-icon p {
+    font-size: 22px;
+  }
+  #contacto .nav-social-icon ul {
+    gap: 32px;
+  }
+  #contacto .nav-social-icon ul img {
+    width: 29px;
+    height: 29px;
   }
 }
 /*# sourceMappingURL=style.css.map */

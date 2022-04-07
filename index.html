@@ -10,7 +10,7 @@
     <script defer src="./index.js"></script>
   </head>
   <body>
-    <script>
+    <!--<script>
       document.addEventListener("DOMContentLoaded", function () {
         loading = document.querySelector(".loading");
 
@@ -24,7 +24,7 @@
     </script>
     <div class="loading show">
       <div class="spin"></div>
-    </div>
+    </div>-->
     <header>
       <nav>
         <div class="nav-logo">
@@ -171,13 +171,14 @@
         <form class="c2r1">
           <h4>Contacto</h4>
           <label for="nombre"> Nombre </label>
-          <input type="text" name="nombre" id="nombre" />
+          <input type="text" name="nombre" id="nombre" required/>
           <label for="email"> Email </label>
-          <input type="email" />
+          <input type="email" id="email" required />
           <label for="asunto"> Asunto </label>
-          <input type="text" name="" id="" />
+          <input type="text" name="" id="asunto" required/>
           <label for="mensaje"> Mensaje </label>
-          <input class="form-text" type="text" name="" id="" />
+           <textarea class="form-text" type="text" name="mensaje" id="mensaje" required>
+          </textarea>
           <button>ENVIAR MENSAJE</button>
         </form>
         <div class="nav-social-icon c1r6">

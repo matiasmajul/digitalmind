@@ -50,12 +50,62 @@ header {
     .nav-social-icon ul {
       display: flex;
       flex-direction: row;
-      align-items: center;
+      align-items: flex-end;
       gap: 1rem;
     }
 
-    .nav-menu ul {
+    .nav-link {
       display: none;
+    }
+    .show {
+      display: block;
+      position: absolute;
+      width: 60vw;
+      height: 100vh;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      background-color: $white;
+      color: $primary-color;
+      border-radius: 47px 0px 0px 47px;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      padding-left: 3rem;
+      padding-right: 2rem;
+      padding-top: 1rem;
+      .br {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        width: 100%;
+        height: 3px;
+
+        border: 0.5px solid #f4698f;
+        box-sizing: border-box;
+        border-radius: 24px;
+      }
+
+      .nav-logo {
+        width: 21px;
+        height: 23px;
+      }
+      .nav-close {
+        position: absolute;
+        top: 1.2rem;
+        right: 2.5rem;
+        height: 13px;
+        width: 13px;
+      }
+
+
+      a {
+        font-family: "Glacial Indifference";
+        font-size: 18px;
+        text-decoration: none;
+        color: $primary-color;
+      }
     }
   }
 }
@@ -113,7 +163,6 @@ header {
         height: 100%;
         background-size: cover;
         transition: 1s background-image ease;
-
       }
       .job__description {
         position: absolute;
@@ -147,10 +196,10 @@ header {
       position: absolute;
       top: 40%;
     }
-    .prev {
+    .after {
       left: -40px;
     }
-    .next {
+    .before {
       right: -40px;
     }
   }
@@ -361,10 +410,10 @@ header {
         height: 4rem;
       }
 
-      .prev {
+      .after {
         left: -70px;
       }
-      .next {
+      .before {
         right: -70px;
       }
     }
@@ -398,7 +447,6 @@ header {
         .job-image {
           width: 100%;
           height: 100%;
-
         }
         .job__description {
           width: 30vw;
@@ -424,10 +472,10 @@ header {
         z-index: 1;
       }
 
-      .prev {
+      .after {
         left: -30vw;
       }
-      .next {
+      .before {
         right: -30vw;
       }
 
@@ -443,23 +491,23 @@ header {
           position: absolute;
           bottom: 0;
           width: 25vw;
-          height: 4rem;
+          height: 3.5rem;
           background-color: $white;
           border-radius: 0 0 1rem 1rem;
           display: flex;
-          justify-content: space-between;
+          justify-content: center;
           align-items: center;
           span {
             text-align: start;
             margin-left: 1rem;
             width: 100%;
-            font-size: 16px;
+            font-size: 14px;
             line-height: 38px;
           }
           button {
-            width: 8.5rem;
-            height: 2.5rem;
-            font-size: 20px;
+            width: 8rem;
+            height: 2rem;
+            font-size: 16px;
             line-height: 38px;
             margin-right: 1rem;
             border: 1px solid $primary-color;
@@ -477,7 +525,6 @@ header {
           height: 100%;
           background-size: cover;
           transition: 1s background-image ease;
-
         }
       }
 
@@ -488,7 +535,6 @@ header {
           height: 100%;
           background-size: cover;
           transition: 1s background-image ease;
-
         }
       }
     }

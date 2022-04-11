@@ -61,14 +61,76 @@ header nav .nav-social-icon ul {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
   gap: 1rem;
 }
 
-header nav .nav-menu ul {
+header nav .nav-link {
   display: none;
+}
+
+header nav .show {
+  display: block;
+  position: absolute;
+  width: 60vw;
+  height: 100vh;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #fff;
+  color: #f4698f;
+  border-radius: 47px 0px 0px 47px;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding-left: 3rem;
+  padding-right: 2rem;
+  padding-top: 1rem;
+}
+
+header nav .show .br {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  width: 100%;
+  height: 3px;
+  border: 0.5px solid #f4698f;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 24px;
+}
+
+header nav .show .nav-logo {
+  width: 21px;
+  height: 23px;
+}
+
+header nav .show .nav-close {
+  position: absolute;
+  top: 1.2rem;
+  right: 2.5rem;
+  height: 13px;
+  width: 13px;
+}
+
+header nav .show a {
+  font-family: "Glacial Indifference";
+  font-size: 18px;
+  text-decoration: none;
+  color: #f4698f;
 }
 
 #nosotros {
@@ -181,11 +243,11 @@ header nav .nav-menu ul {
   top: 40%;
 }
 
-#trabajos .job-container .prev {
+#trabajos .job-container .after {
   left: -40px;
 }
 
-#trabajos .job-container .next {
+#trabajos .job-container .before {
   right: -40px;
 }
 
@@ -452,10 +514,10 @@ header nav .nav-menu ul {
     width: 2rem;
     height: 4rem;
   }
-  #trabajos .job-container .prev {
+  #trabajos .job-container .after {
     left: -70px;
   }
-  #trabajos .job-container .next {
+  #trabajos .job-container .before {
     right: -70px;
   }
   #trabajos hr {
@@ -511,10 +573,10 @@ header nav .nav-menu ul {
     position: absolute;
     z-index: 1;
   }
-  #trabajos .job-container .prev {
+  #trabajos .job-container .after {
     left: -30vw;
   }
-  #trabajos .job-container .next {
+  #trabajos .job-container .before {
     right: -30vw;
   }
   #trabajos .job-container .carousel-after,
@@ -530,15 +592,15 @@ header nav .nav-menu ul {
     position: absolute;
     bottom: 0;
     width: 25vw;
-    height: 4rem;
+    height: 3.5rem;
     background-color: #fff;
     border-radius: 0 0 1rem 1rem;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -548,14 +610,14 @@ header nav .nav-menu ul {
     text-align: start;
     margin-left: 1rem;
     width: 100%;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 38px;
   }
   #trabajos .job-container .carousel-after .job__description button,
   #trabajos .job-container .carousel-before .job__description button {
-    width: 8.5rem;
-    height: 2.5rem;
-    font-size: 20px;
+    width: 8rem;
+    height: 2rem;
+    font-size: 16px;
     line-height: 38px;
     margin-right: 1rem;
     border: 1px solid #f4698f;

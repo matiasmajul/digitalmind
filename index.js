@@ -1,18 +1,43 @@
-// Variables
-const IMAGENES = [
-  '../images/job1.png',
-  '../images/job2.png',
-  '../images/job3.png',
-  '../images/job4.png',
-  '../images/job5.png'
+const JOBS = [
+  {
+    job:'Fotografía',
+    url:'../images/job1.png',
+    jobUrl:'fotografia1'
+  },
+  {
+    job:'Fotografía',
+    url:'../images/job2.png',
+    jobUrl:'fotografia2'
 
-];
-const TIEMPO_INTERVALO_MILESIMAS_SEG = 3000;
+  },
+  {
+    job:'Diseño gráfico',
+    url:'../images/job3.png',
+    jobUrl:'diseno'
+
+  },
+  {
+    job:'Community Management',
+    url:'../images/job4.png',
+    jobUrl:'community'
+
+  },
+  {
+    job:'Diseño & Community Management',
+    url:'../images/job5.png',
+    jobUrl:'diseno&community'
+
+  },
+]
+
 let posicionActual = 0;
-let $botonRetroceder = document.querySelector('.next');
-let $botonAvanzar = document.querySelector('.prev');
+let $botonRetroceder = document.querySelector('.before');
+let $botonAvanzar = document.querySelector('.after');
 let $imagen = document.querySelector('.job-image');
+let jobTitle = document.querySelector('.job__title');
+let jobBtn = document.querySelector('.job_btn')
 let intervalo;
+let newLocation;
 
 let carouselAfter = document.createElement("article");
 let carouselBefore = document.createElement("article");
@@ -22,14 +47,14 @@ carouselBefore.classList = "carousel-before carousel"
 carouselAfter.innerHTML = `
 <div class="after-image"></div>
 <div class="job__description">
-  <span>Fotografía</span>
+  <span class="job__title job__title-after"></span>
   <button>Ver más</button>
 </div>
 `
 carouselBefore.innerHTML = `
 <div class="before-image"></div>
 <div class="job__description">
-  <span>Fotografía</span>
+  <span class="job__title job__title-before"></span>
   <button>Ver más</button>
 </div>
 `
@@ -39,17 +64,20 @@ let contenedor = document.querySelector('.job-container')
 if (window.screen.width >= 768) {
   contenedor.appendChild(carouselAfter)
   contenedor.appendChild(carouselBefore)
+
 }
 
 let imagenAfter = document.querySelector('.after-image');
+let jobTitleAfter = document.querySelector('.job__title-after')
 let imagenBefore = document.querySelector('.before-image');
+let jobTitleBefore = document.querySelector('.job__title-before')
 
 // Funciones
 /**
  * Funcion que cambia la foto en la siguiente posicion
  */
 function pasarFoto() {
-  if (posicionActual >= IMAGENES.length - 1) {
+  if (posicionActual >= JOBS.length ) {
     posicionActual = 0;
   } else {
     posicionActual++;
@@ -61,8 +89,8 @@ function pasarFoto() {
  * Funcion que cambia la foto en la anterior posicion
  */
 function retrocederFoto() {
-  if (posicionActual <= 0) {
-    posicionActual = IMAGENES.length - 1;
+  if (posicionActual == 0) {
+    posicionActual = JOBS.length - 1;
   } else {
     posicionActual--;
   }
@@ -73,26 +101,36 @@ function retrocederFoto() {
  * Funcion que actualiza la imagen de imagen dependiendo de posicionActual
  */
 function renderizarImagen() {
-  $imagen.style.backgroundImage = `url(${IMAGENES[posicionActual]})`;
-  if (posicionActual <= 0) {
-    imagenAfter.style.backgroundImage = `url(${IMAGENES[posicionActual + 1]})`;
-    imagenBefore.style.backgroundImage = `url(${IMAGENES[IMAGENES.length - 1]})`;
+  $imagen.style.backgroundImage = `url(${JOBS[posicionActual].url})`;
+  jobTitle.textContent =   `${JOBS[posicionActual].job}`;
+  newLocation= JOBS[posicionActual].jobUrl;
 
-  } else if (posicionActual >= IMAGENES.length - 1) {
-    imagenAfter.style.backgroundImage = `url(${IMAGENES[0]})`;
-    imagenBefore.style.backgroundImage = `url(${IMAGENES[posicionActual - 1]})`;
+  if (posicionActual == 0) {
+    imagenAfter.style.backgroundImage = `url(${JOBS[posicionActual + 1].url})`;
+    imagenBefore.style.backgroundImage = `url(${JOBS[JOBS.length-1].url})`;
+    jobTitleAfter.textContent =   `${JOBS[posicionActual +1 ].job}`;
+    jobTitleBefore.textContent =   `${JOBS[JOBS.length-1].job}`;
+
+  } else if (posicionActual == (JOBS.length-1)) {
+    imagenAfter.style.backgroundImage = `url(${JOBS[0].url})`;
+    imagenBefore.style.backgroundImage = `url(${JOBS[posicionActual - 1].url})`;
+    jobTitleAfter.textContent =   `${JOBS[0].job}`;
+    jobTitleBefore.textContent =   `${JOBS[posicionActual-1].job}`;
 
   }
-  else{
-    imagenAfter.style.backgroundImage = `url(${IMAGENES[posicionActual + 1]})`;
-    imagenBefore.style.backgroundImage = `url(${IMAGENES[posicionActual - 1]})`;
+  else {
+    imagenAfter.style.backgroundImage = `url(${JOBS[posicionActual + 1].url})`;
+    imagenBefore.style.backgroundImage = `url(${JOBS[posicionActual - 1].url})`;
+    jobTitleAfter.textContent =   `${JOBS[posicionActual + 1].job}`;
+    jobTitleBefore.textContent =   `${JOBS[posicionActual-1].job}`;
+
   }
 }
 
 // Eventos
 $botonAvanzar.addEventListener('click', pasarFoto);
 $botonRetroceder.addEventListener('click', retrocederFoto);
-
+jobBtn.addEventListener('click', ()=>{location.href=`./pages/${newLocation}.html`})
 // Iniciar
 renderizarImagen();
 
@@ -108,9 +146,9 @@ window.addEventListener("resize", event => {
 })
 
 let formulario = document.querySelector("form")
-formulario.addEventListener("submit",event=>{
+formulario.addEventListener("submit", event => {
   event.preventDefault()
   console.log(event.target)
 
-  
+
 })

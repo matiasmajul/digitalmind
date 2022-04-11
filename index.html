@@ -8,6 +8,7 @@
 
     <link rel="stylesheet" href="./styles/style.css" />
     <script defer src="./index.js"></script>
+    <script defer src="../menu.js"></script>
   </head>
   <body>
     <!--<script>
@@ -43,11 +44,23 @@
 
         <div class="nav-menu">
           <img id="menu" src="./icons/menu.svg" alt="menu" />
-          <ul>
-            <li><a href="#nosotros">NOSOTROS</a></li>
-            <li><a href="#servicios">SERVICIOS</a></li>
-            <li><a href="#trabajos">TRABAJOS</a></li>
-            <li class="contacto"><a href="#contacto">CONTACTO</a></li>
+          <ul class="nav-link">
+            <li class="nav-logo">
+              <img src="./icons/logo-menu.svg" alt="logo" />
+            </li>
+            <li class="nav-close">
+              <img src="./icons/close.svg" alt="close" />
+            </li>
+            <div class="br"></div>
+
+            <li><a class="link" href="#nosotros">NOSOTROS</a></li>
+            <div class="br"></div>
+            <li><a class="link"href="#servicios">SERVICIOS</a></li>
+            <div class="br"></div>
+            <li><a class="link"href="#trabajos">TRABAJOS</a></li>
+            <div class="br"></div>
+            <li class="contacto link"><a href="#contacto">CONTACTO</a></li>
+            <div class="br"></div>
           </ul>
         </div>
       </nav>
@@ -152,12 +165,12 @@
           <article class="carousel">
             <div class="job-image"></div>
             <div class="job__description">
-              <span>Fotografía</span>
-              <button>Ver más</button>
+              <span class="job__title">Fotografía</span>
+              <button class="job_btn">Ver más</button>
             </div>
           </article>
-          <img class="btn next" src="./icons/right.svg" alt="" />
-          <img class="btn prev" src="./icons/left.svg" alt="" />
+          <img class="btn before" src="./icons/right.svg" alt="" />
+          <img class="btn after" src="./icons/left.svg" alt="" />
         </div>
         <hr />
       </section>
@@ -171,13 +184,19 @@
         <form class="c2r1">
           <h4>Contacto</h4>
           <label for="nombre"> Nombre </label>
-          <input type="text" name="nombre" id="nombre" required/>
+          <input type="text" name="nombre" id="nombre" required />
           <label for="email"> Email </label>
           <input type="email" id="email" required />
           <label for="asunto"> Asunto </label>
-          <input type="text" name="" id="asunto" required/>
+          <input type="text" name="" id="asunto" required />
           <label for="mensaje"> Mensaje </label>
-           <textarea class="form-text" type="text" name="mensaje" id="mensaje" required>
+          <textarea
+            class="form-text"
+            type="text"
+            name="mensaje"
+            id="mensaje"
+            required
+          >
           </textarea>
           <button>ENVIAR MENSAJE</button>
         </form>

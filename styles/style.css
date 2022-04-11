@@ -40,17 +40,18 @@ header nav {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding-top: 0.5rem;
+  padding: 0.5rem 1rem;
 }
 
-header nav .nav-logo {
-  -ms-grid-column-align: start;
-      justify-self: start;
+header nav .nav-logo img {
+  width: 48px;
+  height: 48px;
 }
 
 header nav .nav-social-icon ul {
@@ -65,6 +66,11 @@ header nav .nav-social-icon ul {
       -ms-flex-align: end;
           align-items: flex-end;
   gap: 1rem;
+}
+
+header nav .nav-social-icon ul img {
+  width: 11px;
+  height: 11px;
 }
 
 header nav .nav-link {
@@ -113,7 +119,7 @@ header nav .show .br {
   border-radius: 24px;
 }
 
-header nav .show .nav-logo {
+header nav .show .menu-logo {
   width: 21px;
   height: 23px;
 }
@@ -137,10 +143,181 @@ header nav .show a {
   color: #fff;
   background-color: #f4698f;
   background-image: url("../images/bg-gradiente.png");
-  background-size: 100vw 100vh;
+  background-size: 100%;
+  height: 100%;
   width: 100vw;
-  height: 100vh;
-  padding-top: 10vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 15vh;
+}
+
+#nosotros img {
+  width: 64px;
+  height: 71px;
+}
+
+#nosotros h1 {
+  width: 50%;
+  font-family: "Abril Fatface";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 38px;
+  line-height: 146%;
+  text-align: center;
+}
+
+#nosotros h2 {
+  font-size: 9px;
+  line-height: 40px;
+  text-align: justify;
+}
+
+#nosotros p {
+  width: 85%;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 24px;
+  text-align: justify;
+  padding: 1rem 0;
+}
+
+#nosotros .h-1,
+#nosotros .h-2 {
+  width: 100%;
+  font-size: 15px;
+  line-height: 38px;
+}
+
+#nosotros .h-1 {
+  text-align: center;
+  width: 100px;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+#nosotros .h-2 {
+  text-align: center;
+}
+
+#nosotros hr {
+  width: 140px;
+  height: 3px;
+  border: 0.5px solid #ffffff;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 24px;
+  margin: 1rem 0 3rem 0;
+}
+
+#servicios {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+#servicios h2 {
+  font-size: 18px;
+  line-height: 38px;
+}
+
+#servicios h3 {
+  font-size: 14px;
+  line-height: 38px;
+}
+
+#servicios article {
+  margin: 1rem 0;
+  width: 200px;
+  height: 176px;
+  padding: 1rem;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 22px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#servicios article img {
+  width: 16px;
+  height: 13px;
+  border: 1px solid red;
+}
+
+#servicios article h4 {
+  font-family: "Abril Fatface";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 11px;
+  line-height: 24px;
+  text-align: center;
+  color: #f4698f;
+}
+
+#servicios article p {
+  font-family: "Glacial Indifference";
+  font-size: 10px;
+  line-height: 200%;
+  text-align: justify;
+  color: #000;
+}
+
+#servicios h4 {
+  font-size: 16px;
+  line-height: 32px;
+  width: 70%;
+}
+
+#servicios hr {
+  border: 0.5px solid #f4698f;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 24px;
+}
+
+#servicios button {
+  font-family: "Glacial Indifference";
+  width: 128px;
+  height: 32px;
+  background: #f4698f;
+  border-radius: 12px;
+  font-size: 10px;
+  line-height: 12px;
+  border: none;
+  color: #fff;
+  margin: 2rem 0;
 }
 
 #trabajos {

@@ -239,6 +239,7 @@ header nav .show a {
 }
 
 #servicios h2 {
+  padding-top: 2rem;
   font-size: 18px;
   line-height: 38px;
 }
@@ -246,6 +247,7 @@ header nav .show a {
 #servicios h3 {
   font-size: 14px;
   line-height: 38px;
+  padding-bottom: 2rem;
 }
 
 #servicios article {
@@ -295,12 +297,16 @@ header nav .show a {
 }
 
 #servicios h4 {
+  padding-top: 2rem;
   font-size: 16px;
   line-height: 32px;
   width: 70%;
 }
 
 #servicios hr {
+  margin: 1rem 0;
+  width: 182px;
+  height: 4px;
   border: 0.5px solid #f4698f;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;

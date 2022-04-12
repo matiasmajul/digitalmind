@@ -61,7 +61,7 @@ carouselBefore.innerHTML = `
 
 let contenedor = document.querySelector('.job-container')
 
-if (window.screen.width >= 768) {
+if (window.screen.width >= 780) {
   contenedor.appendChild(carouselAfter)
   contenedor.appendChild(carouselBefore)
 
@@ -135,7 +135,7 @@ jobBtn.addEventListener('click', ()=>{location.href=`./pages/${newLocation}.html
 renderizarImagen();
 
 window.addEventListener("resize", event => {
-  if (event.target.screen.width >= 768) {
+  if (event.target.screen.width >= 780) {
     contenedor.appendChild(carouselAfter)
     contenedor.appendChild(carouselBefore)
   }

@@ -15,6 +15,8 @@ html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   font-family: "Glacial Indifference", cursive;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 p,
@@ -1120,111 +1122,174 @@ header nav .show a {
     text-decoration: none;
     color: #fff;
   }
+  header nav .nav-menu .nav-link .contacto a:hover {
+    text-decoration: none;
+  }
+  header nav .nav-menu .nav-link .contacto:hover {
+    background-color: #f4698f;
+    border: 2px solid #fff;
+  }
   #nosotros {
+    min-height: 80vh;
     padding-top: 20vh;
-    gap: 2rem;
+    background-size: 100vw 100vh;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 30% 50% 1fr;
+        grid-template-columns: 1fr 30% 50% 1fr;
+    justify-items: center;
+    text-align: center;
   }
   #nosotros img {
-    width: 300px;
-    height: 200px;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-area: 1 / 2 / 2 / 3;
+    width: 120px;
+    height: 120px;
   }
   #nosotros h1 {
-    font-size: 38px;
-    line-height: 146%;
+    width: 100%;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-area: 2 / 2 / 3 / 3;
+    font-size: 80px;
+    line-height: 136%;
   }
   #nosotros h2 {
-    font-size: 19px;
-    line-height: 40px;
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 1;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-area: 3 / 2 / 4 / 3;
+    font-size: 20px;
+    line-height: 38px;
   }
   #nosotros p {
-    font-size: 18px;
-    line-height: 32px;
+    font-size: 24px;
+    line-height: 48px;
+  }
+  #nosotros .p-1 {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 1;
+    grid-area: 1 / 3 / 2 / 4;
+  }
+  #nosotros .p-2 {
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 2;
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 1;
+    grid-area: 2 / 3 / 4 / 4;
   }
   #nosotros .h-1,
   #nosotros .h-2 {
-    font-size: 22px;
-    line-height: 38px;
+    font-weight: 400;
+    font-size: 30px;
+  }
+  #nosotros .h-1 {
+    -ms-grid-row: 4;
+    -ms-grid-row-span: 1;
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 1;
+    grid-area: 4 / 3 / 5 / 4;
+    -ms-grid-column-align: end;
+        justify-self: end;
+  }
+  #nosotros .h-2 {
+    -ms-grid-row: 5;
+    -ms-grid-row-span: 1;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 2;
+    grid-area: 5 / 2 / 6 / 4;
   }
   #nosotros hr {
-    width: 280px;
+    -ms-grid-row: 6;
+    -ms-grid-row-span: 1;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 2;
+    grid-area: 6 / 2 / 7 / 4;
+    width: 500px;
     height: 8px;
   }
   #servicios {
-    padding: 1rem 3rem;
+    margin-top: 2rem;
+    width: 100vw;
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: 1fr 1fr;
-        grid-template-columns: 1fr 1fr;
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
     justify-items: center;
-    gap: 2rem;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   #servicios h2 {
     -ms-grid-row: 1;
     -ms-grid-row-span: 1;
     -ms-grid-column: 1;
-    -ms-grid-column-span: 2;
-    grid-area: 1 / 1 / 2 / 3;
-    font-size: 24px;
+    -ms-grid-column-span: 3;
+    grid-area: 1 / 1 / 2 / 4;
+    font-size: 40px;
     line-height: 38px;
   }
   #servicios h3 {
     -ms-grid-row: 2;
     -ms-grid-row-span: 1;
     -ms-grid-column: 1;
-    -ms-grid-column-span: 2;
-    grid-area: 2 / 1 / 3 / 3;
-    font-size: 16px;
+    -ms-grid-column-span: 3;
+    grid-area: 2 / 1 / 3 / 4;
+    font-size: 26px;
     line-height: 38px;
   }
   #servicios article {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    width: 275px;
-    height: 265px;
+    width: 370px;
+    height: 400px;
   }
   #servicios article img {
-    width: 33px;
-    height: 27px;
+    width: 40px;
+    height: 35px;
   }
   #servicios article h5 {
-    padding: 2rem 0;
-    font-size: 14px;
-    line-height: 24px;
+    width: 100%;
+    padding: 1rem 0;
+    font-size: 20px;
+    line-height: 55px;
   }
   #servicios article p {
     height: 100%;
-    font-family: "Glacial Indifference";
-    font-size: 12px;
-    line-height: 24px;
+    font-size: 19px;
+    line-height: 40px;
   }
   #servicios h4 {
     -ms-grid-row: 6;
     -ms-grid-row-span: 1;
     -ms-grid-column: 1;
-    -ms-grid-column-span: 2;
-    grid-area: 6 / 1 / 7 / 3;
-    font-size: 20px;
-    width: 100%;
+    -ms-grid-column-span: 3;
+    grid-area: 6 / 1 / 7 / 4;
+    font-size: 25px;
+    line-height: 55px;
   }
   #servicios hr {
+    display: none;
+  }
+  #servicios a {
     -ms-grid-row: 7;
     -ms-grid-row-span: 1;
     -ms-grid-column: 1;
-    -ms-grid-column-span: 2;
-    grid-area: 7 / 1 / 8 / 3;
-    width: 265px;
-    height: 8px;
-  }
-  #servicios a {
-    -ms-grid-row: 8;
-    -ms-grid-row-span: 1;
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 2;
-    grid-area: 8 / 1 / 9 / 3;
-    width: 168px;
-    font-size: 12px;
-    line-height: 32px;
+    -ms-grid-column-span: 3;
+    grid-area: 7 / 1 / 8 / 4;
+    width: 356px;
+    height: 72px;
+    font-size: 22px;
+    line-height: 26px;
   }
   #trabajos h2 {
     font-size: 40px;

@@ -1,12 +1,12 @@
-let btnMenu = document.querySelector('#menu');
-let btnClose = document.querySelector('.nav-close');
-let navLink = document.querySelector('.nav-link');
+let btnMenu = document.querySelector('.menu-icon');
+let btnClose = document.querySelector('.menu-close');
+let navLink = document.querySelector('.menu');
 let btnLink = document.querySelectorAll('.link');
 let show = false
 
 function handleMenu(opcion) {
   show = opcion;
-  navLink.classList = `nav-link ${show?"show" : ""}`
+  navLink.classList = `menu ${show?"show" : ""}`
 }
 
 btnMenu.addEventListener('click',()=>handleMenu(true));

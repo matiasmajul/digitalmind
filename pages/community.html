@@ -10,80 +10,96 @@
     <script defer src="../menu.js"></script>
   </head>
   <body>
-    <header>
-      <nav>
-        <div class="nav-logo">
-          <a href="#">
-            <img src="../icons/logo-nav.svg" alt="logo" />
+    <header class="header">
+      <nav class="nav">
+        <div class="logo">
+          <a href="../index.html" class="logo__link">
+            <img class="link__img" src="../icons/logo-nav.svg" alt="logo" />
           </a>
         </div>
-  
-        <div class="nav-social-icon hidden">
-          <ul>
-            <li>
-              <a
-                href="https://www.facebook.com/somosdigitalmind"
-                target="_blank"
-                ><img src="../icons/facebook.svg" alt="facebook"
-              /></a>
+        <ul class="social social--hidden">
+          <li class="list">
+            <a
+              class="link"
+              href="https://www.facebook.com/somosdigitalmind"
+              target="_blank"
+              ><img
+                class="link__img"
+                src="../icons/facebook.svg"
+                alt="facebook"
+            /></a>
+          </li>
+          <li>
+            <a
+              class="link"
+              href="https://www.instagram.com/digitalmind.ar/"
+              target="_blank"
+              ><img
+                class="link__img"
+                src="../icons/instagram.svg"
+                alt="instagram"
+            /></a>
+          </li>
+          <li>
+            <a
+              class="link"
+              href="https://wa.me/5491141564120/?text=Hola!%20Me%20interesa%20sus%20servicios"
+              target="_blank"
+              ><img
+                class="link__img"
+                src="../icons/whatsapp.svg"
+                alt="whatsapp"
+            /></a>
+          </li>
+        </ul>
+
+        <div class="menu">
+          <img class="menu__icon" src="../icons/menu.svg" alt="menu" />
+          <ul class="list">
+            <li class="logo">
+              <img class="logo__img" src="../icons/logo-menu.svg" alt="logo" />
             </li>
-            <li>
-              <a
-                href="https://www.instagram.com/digitalmind.ar/"
-                target="_blank"
-                ><img src="../icons/instagram.svg" alt="instagram"
-              /></a>
+            <li class="close">
+              <img class="close__img" src="../icons/close.svg" alt="close" />
             </li>
-            <li>
-              <a
-                href="https://wa.me/5491141564120/?text=Hola!%20Me%20interesa%20sus%20servicios"
-                target="_blank"
-                ><img src="../icons/whatsapp.svg" alt="whatsapp"
-              /></a>
+            <div class="bar"></div>
+            <li class="option">
+              <a class="option__link" href="../index.html#nosostros">NOSOTROS</a>
             </li>
-          </ul>
-        </div>
-  
-        <div class="nav__menu">
-          <img class="menu-icon" src="../icons/menu.svg" alt="menu" />
-          <ul class="menu">
-            <li class="menu-logo">
-              <img src="../icons/logo-menu.svg" alt="logo" />
+            <div class="bar"></div>
+            <li class="option">
+              <a class="option__link" href="../index.html#servicios">SERVICIOS</a>
             </li>
-            <li class="menu-close">
-              <img src="../icons/close.svg" alt="close" />
+            <div class="bar"></div>
+            <li class="option">
+              <a class="option__link" href="../index.html#trabajos">TRABAJOS</a>
             </li>
-            <div class="br"></div>
-  
-            <li><a class="link" href="../index.html#nosostros">NOSOTROS</a></li>
-            <div class="br"></div>
-            <li><a class="link" href="../index.html#servicios">SERVICIOS</a></li>
-            <div class="br"></div>
-            <li><a class="link" href="../index.html#trabajos">TRABAJOS</a></li>
-            <div class="br"></div>
-            <li class="contacto"><a class="link" href="../index.html#contacto">CONTACTO</a></li>
-            <div class="br"></div>
+            <div class="bar"></div>
+            <li class="contacto-btn">
+              <a class="contacto-btn__link" href="../index.html#contacto">CONTACTO</a>
+            </li>
+            <div class="bar"></div>
           </ul>
         </div>
       </nav>
     </header>
-    <main>
-      <section id="descripcion-trabajo">
-        <h1>COMMUNITY MANAGEMENT</h1>
-        <div class="trabajo-img">
-          <img src="../images/community1.png" alt="fotografia" />
+    <main class="job-description">
+      <section class="job">
+        <h1 class="job__title">COMMUNITY MANAGEMENT</h1>
+        <div class="job-container">
+          <img class="job-container__img" src="../images/community1.png" alt="fotografia" />
         </div>
-        <p>
+        <p class="job__body">
           Gestionamos tus redes sociales, brindamos seguimiento y redactamos los
           copies. Buscamos posicionar tu negocio potenciando tus redes.
         </p>
-        <a href="../index.html#contacto">CONSULTAR SERVICIO</a>
+        <a class="job__btn" href="../index.html#contacto">CONSULTAR SERVICIO</a>
       </section>
-      <div id="fotos">
-        <div class="foto-medio">
-          <img src="../images/community2.png" alt="fotografia" />
+      <section class="picture picture--community">
+        <div class="container-picture container-picture--six">
+          <img class="container-picture__img" src="../images/community2.png" alt="fotografia" />
         </div>
-      </div>
+      </section>
     </main>
   </body>
 </html>

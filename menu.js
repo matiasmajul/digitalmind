@@ -1,12 +1,13 @@
-let btnMenu = document.querySelector('.menu-icon');
-let btnClose = document.querySelector('.menu-close');
-let navLink = document.querySelector('.menu');
-let btnLink = document.querySelectorAll('.link');
+let menuContainer = document.querySelector('.menu');
+let btnMenu = menuContainer.querySelector('.menu__icon');
+let btnClose = menuContainer.querySelector('.close');
+let navLink = menuContainer.querySelector('.list');
+let btnLink = menuContainer.querySelectorAll('.option');
 let show = false
 
 function handleMenu(opcion) {
   show = opcion;
-  navLink.classList = `menu ${show?"show" : ""}`
+  navLink.classList = `list ${show?"list--show" : ""}`
 }
 
 btnMenu.addEventListener('click',()=>handleMenu(true));

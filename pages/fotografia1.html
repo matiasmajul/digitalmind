@@ -10,85 +10,125 @@
     <script defer src="../menu.js"></script>
   </head>
   <body>
-    <header>
-      <nav>
-        <div class="nav-logo">
-          <a href="#">
-            <img src="../icons/logo-nav.svg" alt="logo" />
+    <header class="header">
+      <nav class="nav">
+        <div class="logo">
+          <a href="../index.html" class="logo__link">
+            <img class="link__img" src="../icons/logo-nav.svg" alt="logo" />
           </a>
         </div>
-  
-        <div class="nav-social-icon hidden">
-          <ul>
-            <li>
-              <a
-                href="https://www.facebook.com/somosdigitalmind"
-                target="_blank"
-                ><img src="../icons/facebook.svg" alt="facebook"
-              /></a>
+        <ul class="social social--hidden">
+          <li class="list">
+            <a
+              class="link"
+              href="https://www.facebook.com/somosdigitalmind"
+              target="_blank"
+              ><img
+                class="link__img"
+                src="../icons/facebook.svg"
+                alt="facebook"
+            /></a>
+          </li>
+          <li>
+            <a
+              class="link"
+              href="https://www.instagram.com/digitalmind.ar/"
+              target="_blank"
+              ><img
+                class="link__img"
+                src="../icons/instagram.svg"
+                alt="instagram"
+            /></a>
+          </li>
+          <li>
+            <a
+              class="link"
+              href="https://wa.me/5491141564120/?text=Hola!%20Me%20interesa%20sus%20servicios"
+              target="_blank"
+              ><img
+                class="link__img"
+                src="../icons/whatsapp.svg"
+                alt="whatsapp"
+            /></a>
+          </li>
+        </ul>
+
+        <div class="menu">
+          <img class="menu__icon" src="../icons/menu.svg" alt="menu" />
+          <ul class="list">
+            <li class="logo">
+              <img class="logo__img" src="../icons/logo-menu.svg" alt="logo" />
             </li>
-            <li>
-              <a
-                href="https://www.instagram.com/digitalmind.ar/"
-                target="_blank"
-                ><img src="../icons/instagram.svg" alt="instagram"
-              /></a>
+            <li class="close">
+              <img class="close__img" src="../icons/close.svg" alt="close" />
             </li>
-            <li>
-              <a
-                href="https://wa.me/5491141564120/?text=Hola!%20Me%20interesa%20sus%20servicios"
-                target="_blank"
-                ><img src="../icons/whatsapp.svg" alt="whatsapp"
-              /></a>
+            <div class="bar"></div>
+            <li class="option">
+              <a class="option__link" href="../index.html#nosostros"
+                >NOSOTROS</a
+              >
             </li>
-          </ul>
-        </div>
-  
-        <div class="nav__menu">
-          <img class="menu-icon" src="../icons/menu.svg" alt="menu" />
-          <ul class="menu">
-            <li class="menu-logo">
-              <img src="../icons/logo-menu.svg" alt="logo" />
+            <div class="bar"></div>
+            <li class="option">
+              <a class="option__link" href="../index.html#servicios"
+                >SERVICIOS</a
+              >
             </li>
-            <li class="menu-close">
-              <img src="../icons/close.svg" alt="close" />
+            <div class="bar"></div>
+            <li class="option">
+              <a class="option__link" href="../index.html#trabajos">TRABAJOS</a>
             </li>
-            <div class="br"></div>
-  
-            <li><a class="link" href="../index.html#nosostros">NOSOTROS</a></li>
-            <div class="br"></div>
-            <li><a class="link" href="../index.html#servicios">SERVICIOS</a></li>
-            <div class="br"></div>
-            <li><a class="link" href="../index.html#trabajos">TRABAJOS</a></li>
-            <div class="br"></div>
-            <li class="contacto link"><a href="../index.html#contacto">CONTACTO</a></li>
-            <div class="br"></div>
+            <div class="bar"></div>
+            <li class="contacto-btn">
+              <a class="contacto-btn__link" href="../index.html#contacto"
+                >CONTACTO</a
+              >
+            </li>
+            <div class="bar"></div>
           </ul>
         </div>
       </nav>
     </header>
-    <main>
-      <section id="descripcion-trabajo">
-        <h1>FOTOGRAFÍA</h1>
-        <img src="../images/foto1.png" alt="fotografia" />
-        <p>
+    <main class="job-description">
+      <section class="job">
+        <h1 class="job__title">FOTOGRAFÍA</h1>
+        <div class="job-container">
+          <img
+            class="job-container__img"
+            src="../images/foto1.png"
+            alt="fotografia"
+          />
+        </div>
+        <p class="job__body">
           Ofrecemos fotografía de producto para tiendas online. Buscamos que tu
           producto se destaque capturando los mejores planos y detalles.
           Acompañanos a llevar tus fotografías al siguiente nivel.
         </p>
-        <a href="../index.html#contacto">CONSULTAR SERVICIO</a>
+        <a class="job__btn" href="../index.html#contacto">CONSULTAR SERVICIO</a>
       </section>
-      <section id="fotos">
-        <div>
-          <img src="../images/foto2.png" alt="fotografia" />
+      <section class="picture picture--foto-one">
+        <div class="container-picture container-picture--one">
+          <img
+            class="container-picture__img"
+            src="../images/foto2.png"
+            alt="fotografia"
+          />
         </div>
 
-        <div class="foto-medio">
-          <img src="../images/foto3.png" alt="fotografia" />
+        <div class="container-picture container-picture--two">
+          <img
+            class="container-picture__img"
+            src="../images/foto3.png"
+            alt="fotografia"
+          />
         </div>
 
-        <div>
-          <img src="../images/foto4.png" alt="fotografia" />
+        <div class="container-picture container-picture--three">
+          <img
+            class="container-picture__img"
+            src="../images/foto4.png"
+            alt="fotografia"
+          />
         </div>
       </section>
     </main>

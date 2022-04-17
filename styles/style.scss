@@ -799,12 +799,11 @@ html {
   }
 
   .trabajos {
-    .header-job{
-
+    .header-job {
       &__title {
         font-size: 24px;
       }
-  
+
       &__subtitle {
         font-size: 16px;
       }
@@ -889,49 +888,39 @@ html {
 
 @media only screen and (min-width: 780px) {
   html {
-    font-size: 150%;
+    font-size: 200%;
   }
   .header {
-    padding: 0;
-    margin: 0;
-    height: 15vh;
-    width: 100vw;
     .nav {
-      padding: 0;
-      margin: 0;
-      height: 100%;
-      justify-content: center;
-      align-items: center;
+      justify-content: space-around;
+      gap: 0;
       .logo {
-        position: absolute;
-        top: 10px;
-        left: 40px;
         .link__img {
-          width: 70px;
-          height: 70px;
+          width: 100%;
+          height: 100%;
         }
       }
       .social {
         position: absolute;
         flex-direction: column;
-        right: 60px;
+        right: 2em;
         top: 30vh;
         .link__img {
-          padding: 1rem 0;
           width: 29px;
           height: 29px;
         }
+        &--hidden{
+          visibility: hidden;
+        }
       }
-      .hidden {
-        display: none;
-      }
+
       .menu {
         .menu__icon {
           display: none;
         }
         .list {
           display: flex;
-          gap: 3rem;
+          gap: 2rem;
           .close,
           .logo {
             display: none;
@@ -950,27 +939,17 @@ html {
           }
 
           .contacto-btn {
-            position: absolute;
-            right: 20px;
-            top: 20px;
             border: 1px solid #ffffff;
-            box-sizing: border-box;
             border-radius: 16px;
-            width: 150px;
             height: 50px;
-            text-align: center;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            padding: 0 0.3em;
             &:hover {
               background-color: $primary-color;
               border: 2px solid #fff;
             }
 
             &__link {
-              width: 100%;
-              font-size: 22px;
-              line-height: 26px;
+              font-size: 0.7em;
               color: $white;
               text-decoration: none;
             }
@@ -981,53 +960,54 @@ html {
   }
 
   .nosotros {
-    min-height: 80vh;
-    padding-top: 20vh;
-
     display: grid;
     grid-template-columns: 1fr 30% 50% 1fr;
+    gap: 0;
     justify-items: center;
     text-align: center;
-    img {
+    &__img {
       grid-area: 1 / 2 / 2 / 3;
       width: 120px;
       height: 120px;
     }
-    h1 {
+    &__title {
       width: 100%;
       grid-area: 2 / 2 / 3 / 3;
       font-size: 80px;
       line-height: 136%;
     }
-    h2 {
+    &__subtitle {
       grid-area: 3 / 2 / 4 / 3;
       font-size: 20px;
       line-height: 38px;
     }
-    p {
+    &__body {
+      width: 90%;
+      padding: 0;
       font-size: 24px;
       line-height: 48px;
+      &--top {
+        grid-area: 1 / 3 / 2 / 4;
+      }
+      &--bottom {
+        grid-area: 2 / 3 / 4 / 4;
+      }
     }
-    .p-1 {
-      grid-area: 1 / 3 / 2 / 4;
-    }
-    .p-2 {
-      grid-area: 2 / 3 / 4 / 4;
-    }
-    .h-1,
-    .h-2 {
+    &__footer {
       font-weight: 400;
       font-size: 30px;
-    }
-    .h-1 {
-      grid-area: 4 / 3 / 5 / 4;
-      justify-self: end;
-    }
-    .h-2 {
-      grid-area: 5 / 2 / 6 / 4;
+      &--top {
+        grid-area: 4 / 3 / 5 / 4;
+        padding: 1em 0;
+        justify-self: end;
+      }
+      &--bottom {
+        font-weight: normal;
+        grid-area: 5 / 2 / 6 / 4;
+      }
     }
 
-    hr {
+    &__bar {
       grid-area: 6 / 2 / 7 / 4;
       width: 500px;
       height: 8px;
@@ -1035,50 +1015,54 @@ html {
   }
 
   .servicios {
-    margin-top: 2rem;
-    width: 100vw;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    justify-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    h2 {
-      grid-area: 1 / 1 / 2 / 4;
+    &__title {
       font-size: 40px;
       line-height: 38px;
     }
-    h3 {
-      grid-area: 2 / 1 / 3 / 4;
+    &__subtitle {
       font-size: 26px;
       line-height: 38px;
     }
 
-    article {
+    .container {
+      width: 90%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
       align-items: center;
-      width: 370px;
-      height: 400px;
-      img {
-        width: 40px;
-        height: 35px;
-      }
-      h5 {
-        width: 100%;
-        padding: 1rem 0;
-        font-size: 20px;
-        line-height: 55px;
-      }
-      p {
+      gap: 1em;
+      .card {
+        justify-content: flex-start;
+        width: 25%;
+        min-height: 400px;
         height: 100%;
-        font-size: 19px;
-        line-height: 40px;
+        &__img {
+          width: 1em;
+          height: 35px;
+        }
+        &__title {
+          width: 100%;
+          padding: 1rem 0;
+          font-size: 0.5em;
+          line-height: 55px;
+        }
+        &__body {
+          height: 100%;
+          font-size: 0.5em;
+          line-height: 40px;
+        }
       }
     }
 
-    h4 {
-      grid-area: 6 / 1 / 7 / 4;
+    &__footer {
       font-size: 25px;
       line-height: 55px;
     }
-    hr {
+    &__bar {
       display: none;
     }
     a {
@@ -1091,7 +1075,7 @@ html {
   }
 
   .trabajos {
-    .header {
+    .header-job {
       &__title {
         font-size: 40px;
         line-height: 38px;
@@ -1103,185 +1087,170 @@ html {
       }
     }
 
-    .container {
+    .container-job {
       position: relative;
       display: flex;
       align-items: center;
       .carousel {
-        border-radius: 26px;
         z-index: 1;
         width: 30vw;
-        height: 50vh;
-        &__img {
-          width: 100%;
-          height: 100%;
-        }
+        height: 60vh;
+
         .description {
           width: 30vw;
-          height: 4rem;
+          height: 50px;
 
           &__title {
             font-size: 16px;
             line-height: 38px;
           }
           &__btn {
-            width: 8.5rem;
-            height: 2.5rem;
+            border-radius: 10px;
+
+            width: 150px;
+            height: 70%;
             font-size: 20px;
-            line-height: 38px;
+          }
+        }
+
+        &--after,
+        &--before {
+          position: absolute;
+          width: 25vw;
+          height: 55vh;
+          z-index: 0;
+          &__img {
+            width: 100%;
+            height: 100%;
+          }
+          .description-back {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 50px;
+            background-color: $white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            &__title {
+              margin-left: 1em;
+              text-align: start;
+              width: 100%;
+              font-size: 12px;
+            }
+            &__btn {
+              border-radius: 10px;
+              margin-right: 1em;
+              width: 150px;
+              height: 70%;
+              font-size: 18px;
+              line-height: 38px;
+              border: 1px solid $primary-color;
+              background-color: $white;
+              font-family: "Glacial Indifference", cursive;
+            }
+          }
+        }
+
+        &--after {
+          left: 20vw;
+          &--image {
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            transition: 1s background-image ease;
+          }
+        }
+
+        &--before {
+          right: 20vw;
+          &--image {
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            transition: 1s background-image ease;
           }
         }
       }
-
-      .container__btn {
-        width: 3rem;
-        height: 5rem;
+      &__btn {
+        width: 1em;
+        height: 100px;
         position: absolute;
         z-index: 1;
-      }
 
-      .container__btn--after {
-        left: -30vw;
-      }
-      .container__btn--before {
-        right: -30vw;
-      }
-
-      .carousel--after,
-      .carousel--before {
-        border-radius: 26px;
-        position: absolute;
-        width: 25vw;
-        height: 45vh;
-        z-index: 0;
-
-        .description {
-          position: absolute;
-          bottom: 0;
-          width: 25vw;
-          height: 3.5rem;
-          background-color: $white;
-          border-radius: 0 0 1rem 1rem;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          &__title {
-            text-align: start;
-            margin-left: 1rem;
-            width: 100%;
-            font-size: 14px;
-            line-height: 38px;
-          }
-          &__btn {
-            width: 8rem;
-            height: 2rem;
-            font-size: 16px;
-            line-height: 38px;
-            margin-right: 1rem;
-            border: 1px solid $primary-color;
-            border-radius: 0.5rem;
-            background-color: $white;
-            font-family: "Glacial Indifference", cursive;
-          }
+        &--after {
+          left: -30vw;
         }
-      }
-
-      .carousel--after {
-        left: 20vw;
-        .after-image {
-          width: 100%;
-          height: 100%;
-          background-size: cover;
-          transition: 1s background-image ease;
-        }
-      }
-
-      .carousel--before {
-        right: 20vw;
-        .before-image {
-          width: 100%;
-          height: 100%;
-          background-size: cover;
-          transition: 1s background-image ease;
+        &--before {
+          right: -30vw;
         }
       }
     }
-    .trabajos__bar {
-      width: 25rem;
+    &__bar {
+      width: 10em;
     }
   }
 
   .contacto {
-    margin: 0;
     padding: 0;
+    margin: 0;
     width: 100vw;
-    height: 100vh;
+    height: 100%;
     background-color: $white;
     display: grid;
-    text-align: center;
-    grid-template-columns: repeat(2, 50%);
-    grid-template-rows: repeat(6, 1fr);
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
-
-    .c1r1 {
-      grid-area: 1 / 1 / 2 / 2;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    .container-contacto {
+      grid-area: 1/1/2/2;
+      &__title {
+        font-size: 0.7em;
+      }
+      &__img {
+        width: 2em;
+        height: 2em;
+      }
+      &__subtitle {
+        font-size: 0.7em;
+        &--bottom {
+          font-size: 1em;
+        }
+      }
     }
-    .c1r2 {
-      grid-area: 2 / 1 / 3 / 2;
-    }
-    .c1r3 {
-      grid-area: 3 / 1 / 4 / 2;
-    }
-    .c1r4 {
-      grid-area: 4 / 1 / 5 / 2;
-      align-self: start;
-    }
-    .c1r5 {
-      grid-area: 5 / 1 / 6 / 2;
-    }
-    .c2r1 {
-      grid-area: 1 / 2 / 7 / 3;
-    }
-
-    form {
+    .form {
+      grid-area: 1/2/4/3;
       background-color: $white;
-      width: 100%;
+      width: 50vw;
       height: 100%;
       display: flex;
-      justify-content: center;
+      justify-content: flex-start;
       align-items: center;
-      gap: 0;
+      gap: 0.5em;
       color: $black;
 
-      h4 {
-        font-size: 40px;
+      &__title {
+        font-size: 30px;
         line-height: 38px;
         visibility: visible;
-        padding-bottom: 1rem;
+        padding: 1em 0;
       }
 
-      label {
-        align-self: flex-start;
-        padding-left: 15%;
+      &__label {
+        align-self: center;
         font-size: 20px;
-        line-height: 41px;
-        padding-top: 0.5rem;
+        width: 70%;
       }
-      input {
+      &__input {
         color: $black;
         width: 70%;
         font-size: 20px;
-        line-height: 2rem;
+        line-height: 1rem;
         border: 1px solid $primary-color;
-        padding-left: 1rem;
-
         &:focus {
           border: 2px solid $primary-color;
           background-color: $white;
         }
       }
-      textarea {
+      &__textarea {
         color: $black;
         width: 70%;
         border: 1px solid $primary-color;
@@ -1292,104 +1261,125 @@ html {
           background-color: $white;
         }
       }
-      button {
-        width: 16rem;
-        height: 3rem;
+      &__btn {
+        margin-bottom: 2em;
+        width: 12em;
+        height: 3em;
         border-radius: 24px;
         font-size: 16px;
       }
     }
-    p {
-      font-size: 30px;
-    }
-    img {
-      width: 90px;
-      height: 90px;
-    }
-    h3 {
-      font-size: 35px;
-    }
 
-    .nav-social-icon {
-      p {
+    .social {
+      grid-area: 3/1/4/2;
+
+      &__title {
         font-size: 22px;
       }
-      ul {
+      .container-social {
         gap: 32px;
-
-        img {
+        .link__img {
           width: 29px;
           height: 29px;
         }
       }
     }
+    &__bar {
+      grid-area: 2/1/3/2;
+    }
   }
 
   .job-description {
     .job {
-      background-image: url("../images/bg-gradiente.png");
-      background-size: 100vw 100vh;
       background-color: $primary-color;
-      width: 100vw;
-      height: 85vh;
       padding-top: 15vh;
       display: grid;
       grid-template-columns: 40% 60%;
       place-items: center center;
-      .container {
+      .job-container {
         grid-area: 1 / 1 / 4 / 2;
         align-self: end;
         display: grid;
-        place-content: center center;
         background-color: white;
         width: 100%;
         height: 100%;
-        &__img {
-          width: 100%;
-          height: 100%;
-        }
+
       }
       &__title {
         grid-area: 1 / 2 / 2 / 3;
         background-color: $primary-color;
         background-image: none;
         width: 100%;
-        height: 100%;
         font-size: 27px;
         line-height: 36px;
+        padding: 0;
       }
       &__body {
+        padding: 0;
+        width: 50%;
         grid-area: 2 / 2 / 3 / 3;
-
         font-size: 20px;
         line-height: 32px;
-        background-color: $primary-color;
-        background-image: none;
-        width: 100%;
-        height: 100%;
       }
       &__btn {
+        margin: 0;
         grid-area: 3 / 2 / 4 / 3;
-
-        width: 350px;
+        width: 300px;
         height: 70px;
         font-size: 22px;
         line-height: 26px;
-        background-color: $primary-color;
-        background-image: none;
-        width: 100%;
-        height: 100%;
       }
     }
     .picture {
-      .container {
+      .container-picture {
         width: 100vw;
         height: 100vh;
-
-        &__img {
-          width: 500px;
-          height: 500px;
+        &--one{
+         .container-picture__img{
+           width: 60vw;
+           height: 100%;
+         }
         }
+        &--two{
+          .container-picture__img{
+            width: 40vw;
+           height: 100%;
+          }
+        }
+        &--three{
+          .container-picture__img{
+            width: 60vw;
+            height: 100%;
+          }
+         }
+         &--four{
+           background-size: 40vw 100vh;
+            background-repeat: no-repeat;
+          .container-picture__img{
+            margin-right: 15vw;
+            background-color: $white;
+            width: 30vw;
+            height: 50%;
+          }
+         }
+         &--five{
+          background-size: 60vw 100vh;
+          background-repeat: no-repeat;
+          background-position: 40vw;
+          .container-picture__img{
+            justify-content: flex-end;
+            margin-left: 45vw;
+            width: 60vw;
+            height: 100%;
+          }
+         }
+         &--six{
+          width: 40vw;
+        .container-picture__img{
+          width: 30vw;
+          height: 50%;
+        }
+         }
       }
     }
   }

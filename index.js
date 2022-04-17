@@ -48,17 +48,17 @@ carouselAfter.classList = "carousel--after carousel";
 carouselBefore.classList = "carousel--before carousel";
 
 carouselAfter.innerHTML = `
-<div class="carousel__img--after"></div>
-<div class="description">
-  <span class="description__title description__title--after"></span>
-  <button class="description__btn">Ver más</button>
+<div class="carousel__img carousel__img--after"></div>
+<div class="description-back">
+  <span class="description-back__title description-back__title--after"></span>
+  <button class="description-back__btn">Ver más</button>
 </div>
 `
 carouselBefore.innerHTML = `
-<div class="carousel__img--before"></div>
-<div class="description">
-  <span class="description__title description__title--before"></span>
-  <button class="description__btn">Ver más</button>
+<div class="carousel__img carousel__img--before"></div>
+<div class="description-back">
+  <span class="description-back__title description-back__title--before"></span>
+  <button class="description-back__btn">Ver más</button>
 </div>
 `
 if (window.screen.width > 780) {
@@ -67,9 +67,9 @@ if (window.screen.width > 780) {
 }
 
 let pictureAfter = document.querySelector('.carousel__img--after');
-let titleAfter = document.querySelector('.description__title--after');
+let titleAfter = document.querySelector('.description-back__title--after');
 let pictureBefore = document.querySelector('.carousel__img--before');
-let titleBefore = document.querySelector('.description__title--before');
+let titleBefore = document.querySelector('.description-back__title--before');
 
 // Funciones
 /**
@@ -106,21 +106,21 @@ function renderImage() {
   if (window.screen.width > 780) {
 
     if (position == 0) {
-      pictureAfter.style.backgroundImage = `url(${JOBS[position + 1].url})`;
-      pictureBefore.style.backgroundImage = `url(${JOBS[JOBS.length - 1].url})`;
+      pictureAfter.style.backgroundImage = `url(./images/${JOBS[position + 1].url})`;
+      pictureBefore.style.backgroundImage = `url(./images/${JOBS[JOBS.length - 1].url})`;
       titleAfter.textContent = `${JOBS[position + 1].job}`;
       titleBefore.textContent = `${JOBS[JOBS.length - 1].job}`;
 
     } else if (position == (JOBS.length - 1)) {
-      pictureAfter.style.backgroundImage = `url(${JOBS[0].url})`;
-      pictureBefore.style.backgroundImage = `url(${JOBS[position - 1].url})`;
+      pictureAfter.style.backgroundImage = `url(./images/${JOBS[0].url})`;
+      pictureBefore.style.backgroundImage = `url(./images/${JOBS[position - 1].url})`;
       titleAfter.textContent = `${JOBS[0].job}`;
       titleBefore.textContent = `${JOBS[position - 1].job}`;
 
     }
     else {
-      pictureAfter.style.backgroundImage = `url(${JOBS[position + 1].url})`;
-      pictureBefore.style.backgroundImage = `url(${JOBS[position - 1].url})`;
+      pictureAfter.style.backgroundImage = `url(./images/${JOBS[position + 1].url})`;
+      pictureBefore.style.backgroundImage = `url(./images/${JOBS[position - 1].url})`;
       titleAfter.textContent = `${JOBS[position + 1].job}`;
       titleBefore.textContent = `${JOBS[position - 1].job}`;
 

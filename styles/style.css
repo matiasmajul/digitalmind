@@ -1115,7 +1115,7 @@ html::-webkit-scrollbar-track:hover, html::-webkit-scrollbar-track:active {
     width: 29px;
     height: 29px;
   }
-  .header .nav .social--hidden {
+  .header .nav .social .link__img--hidden {
     visibility: hidden;
   }
   .header .nav .menu .menu__icon {
@@ -1151,7 +1151,8 @@ html::-webkit-scrollbar-track:hover, html::-webkit-scrollbar-track:active {
   }
   .header .nav .menu .list .contacto-btn:hover {
     background-color: #f4698f;
-    border: 2px solid #fff;
+    -webkit-box-shadow: 1px 1px 2px #fff;
+            box-shadow: 1px 1px 2px #fff;
   }
   .header .nav .menu .list .contacto-btn__link {
     font-size: 0.7em;

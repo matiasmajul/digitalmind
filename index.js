@@ -1,3 +1,6 @@
+/*
+* VARIABLES
+*/
 const JOBS = [
   {
     job: 'Fotografía',
@@ -39,9 +42,9 @@ let btnAfter = CONTAINER.querySelector('.container-job__btn--after');
 let pictureJob = CAROUSEL.querySelector('.carousel__img');
 let titleJob = CAROUSEL.querySelector('.description__title');
 let btnJob = CAROUSEL.querySelector('.description__btn')
-let intervalo;
 let newLocation;
 
+/* CAROUSEL AFTER Y BEFORE */
 let carouselAfter = document.createElement("div");
 let carouselBefore = document.createElement("div");
 carouselAfter.classList = "carousel--after carousel";
@@ -70,8 +73,6 @@ let pictureAfter = document.querySelector('.carousel__img--after');
 let titleAfter = document.querySelector('.description-back__title--after');
 let pictureBefore = document.querySelector('.carousel__img--before');
 let titleBefore = document.querySelector('.description-back__title--before');
-
-
 
 
 // Funciones
@@ -134,7 +135,7 @@ function renderImage() {
 // Eventos
 btnAfter.addEventListener('click', nextPicture);
 btnBefore.addEventListener('click', previousPicture);
-btnJob.addEventListener('click', () => { location.href = `./pages/${newLocation}.html` })
+btnJob.addEventListener('click', () => { location.href = `./pages/${newLocation}.html` });
 // Iniciar
 renderImage();
 
@@ -145,7 +146,6 @@ window.addEventListener("resize", event => {
   }
   else {
     if (CONTAINER.children[3] != undefined) {
-
       CONTAINER.removeChild(carouselAfter)
       CONTAINER.removeChild(carouselBefore)
     }
@@ -153,12 +153,13 @@ window.addEventListener("resize", event => {
   }
 })
 
-let formulario = document.querySelector(".form")
+
+/* FORMULARIO */
+let formulario = document.querySelector(".form");
+
 formulario.addEventListener("submit", event => {
-  event.preventDefault()
-
+  event.preventDefault();
   let formInput = document.querySelector('.form').children;
-
   emailjs.send('service_kof91w4', 'template_r3xszxe', {
     from_name: formInput[2].value,
     subject: formInput[6].value,
@@ -174,9 +175,7 @@ formulario.addEventListener("submit", event => {
       toggleModal('Error, volver a intentar!')
       console.log('FAILED...', error);
     });
-
 })
-
 
 function toggleModal(mensaje) {
   let modal = document.getElementById("myModal");

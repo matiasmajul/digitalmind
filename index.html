@@ -122,7 +122,7 @@
           siguiente nivel. <b>Estamos listos para conocerte.</b>
         </p>
         <h3 class="nosotros__footer nosotros__footer--top">¿Y vos?</h3>
-        <h3 class="nostros__footer nosotros__footer--bottom">Te acompañamos a hacer realidad tu proyecto.</h3>
+        <h3 class="nostros__footer nosotros__footer--bottom">Te acompañamos a hacer realidad tu proyecto.   </h3>
         <hr class="nosotros__bar"/>
       </section>
       <section id="servicios" class="servicios">
@@ -212,7 +212,8 @@
           <h3 class="container-contacto__title">No dudes en consultarnos</h3>
             <img class="container-contacto__img" src="./icons/logo.svg" alt="logo" />
           <h4 class="container-contacto__subtitle container-contacto__subtitle--top">Compartinos tu proyecto.</h4>
-          <h4 class="container-contacto__subtitle container-contacto__subtitle--bottom">Y encontrá excelentes resultados.</h4>
+          <h4 class="container-contacto__subtitle container-contacto__subtitle--bottom">Y encontrá excelentes resultados.
+            </h4>
         </div>
         <form class="form">
           <h4 class="form__title">Contacto</h4>
@@ -228,9 +229,10 @@
             type="text"
             name="mensaje"
             id="mensaje"
+            maxlength="200"
+            placeholder="Dejanos tu mensaje"
             required
-          >
-          </textarea>
+          ></textarea>
           <button class="form__btn">ENVIAR MENSAJE</button>
         </form>
         <div class="social">
@@ -269,7 +271,21 @@
           </ul>
         </div>
         <hr class="contacto__bar" />
+        <div id="myModal" class="modalContainer">
+          <div class="modal-content">
+            <p>Mensaje enviado!</p> 
+          </div>          
+          </div>
+        </div> 
       </section>
     </main>
+    <script type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function(){
+        emailjs.init("LbYQ-4abzoZEbuTEj");
+        })();
+    </script>
   </body>
 </html>

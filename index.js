@@ -141,20 +141,45 @@ window.addEventListener("resize", event => {
     CONTAINER.appendChild(carouselBefore)
   }
   else {
-    if(CONTAINER.children[3]!= undefined)
-    {
+    if (CONTAINER.children[3] != undefined) {
 
       CONTAINER.removeChild(carouselAfter)
       CONTAINER.removeChild(carouselBefore)
     }
-    
+
   }
 })
 
 let formulario = document.querySelector(".form")
 formulario.addEventListener("submit", event => {
   event.preventDefault()
-  console.log(event.target)
 
+  let formInput = document.querySelector('.form').children;
+
+  emailjs.send('service_kof91w4', 'template_r3xszxe', {
+    from_name: formInput[2].value,
+    subject: formInput[6].value,
+    message: formInput[8].value,
+    email: formInput[4].value,
+    to_email: 'majulmatias@gmail.com',
+  })
+    .then(function (response) {
+      console.log('SUCCESS!', response.status, response.text);
+      toggleModal('Mensaje enviado!')
+      document.getElementsByClassName('form').reset();
+    }, function (error) {
+      toggleModal('Error, volver a intentar!')
+      console.log('FAILED...', error);
+    });
 
 })
+
+
+function toggleModal(mensaje) {
+  let modal = document.getElementById("myModal");
+  modal.children[0].children[0].innerHTML = mensaje;
+  modal.style.visibility = "visible";
+  setTimeout(() => {
+    modal.style.visibility = "hidden";
+  }, 2000);
+}

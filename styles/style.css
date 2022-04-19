@@ -841,7 +841,7 @@ html::-webkit-scrollbar-track:hover, html::-webkit-scrollbar-track:active {
   background-repeat: no-repeat;
   background-size: 60px;
   background-position: center;
-  z-index: 1;
+  z-index: 2;
   -webkit-transition: 1s opacity;
   transition: 1s opacity;
   opacity: 0;
@@ -857,23 +857,14 @@ html::-webkit-scrollbar-track:hover, html::-webkit-scrollbar-track:active {
   0% {
     background-image: url("../icons/frame1.svg");
   }
-  15% {
+  30% {
     background-image: url("../icons/frame2.svg");
   }
-  30% {
+  50% {
     background-image: url("../icons/frame3.svg");
   }
-  45% {
-    background-image: url("../icons/frame4.svg");
-  }
-  60% {
-    background-image: url("../icons/frame5.svg");
-  }
-  75% {
-    background-image: url("../icons/frame6.svg");
-  }
   100% {
-    background-image: url("../icons/frame7.svg");
+    background-image: url("../icons/frame4.svg");
   }
 }
 
@@ -881,23 +872,14 @@ html::-webkit-scrollbar-track:hover, html::-webkit-scrollbar-track:active {
   0% {
     background-image: url("../icons/frame1.svg");
   }
-  15% {
+  30% {
     background-image: url("../icons/frame2.svg");
   }
-  30% {
+  50% {
     background-image: url("../icons/frame3.svg");
   }
-  45% {
-    background-image: url("../icons/frame4.svg");
-  }
-  60% {
-    background-image: url("../icons/frame5.svg");
-  }
-  75% {
-    background-image: url("../icons/frame6.svg");
-  }
   100% {
-    background-image: url("../icons/frame7.svg");
+    background-image: url("../icons/frame4.svg");
   }
 }
 

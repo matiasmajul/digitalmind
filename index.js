@@ -71,6 +71,9 @@ let titleAfter = document.querySelector('.description-back__title--after');
 let pictureBefore = document.querySelector('.carousel__img--before');
 let titleBefore = document.querySelector('.description-back__title--before');
 
+
+
+
 // Funciones
 /**
  * Funcion que cambia la foto en la siguiente posicion
@@ -164,9 +167,9 @@ formulario.addEventListener("submit", event => {
     to_email: 'majulmatias@gmail.com',
   })
     .then(function (response) {
-      console.log('SUCCESS!', response.status, response.text);
       toggleModal('Mensaje enviado!')
-      document.getElementsByClassName('form').reset();
+      document.querySelector('.form').reset();
+      console.log('SUCCESS!', response.status, response.text);
     }, function (error) {
       toggleModal('Error, volver a intentar!')
       console.log('FAILED...', error);

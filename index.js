@@ -165,7 +165,7 @@ formulario.addEventListener("submit", event => {
     subject: formInput[6].value,
     message: formInput[8].value,
     email: formInput[4].value,
-    to_email: 'majulmatias@gmail.com',
+    to_email: 'digitalmind.ar@gmail.com',
   })
     .then(function (response) {
       toggleModal('Mensaje enviado!')

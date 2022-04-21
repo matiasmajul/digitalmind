@@ -160,7 +160,7 @@ let formulario = document.querySelector(".form");
 formulario.addEventListener("submit", event => {
   event.preventDefault();
   let formInput = document.querySelector('.form').children;
-  emailjs.send('service_kof91w4', 'template_r3xszxe', {
+  emailjs.send('service_oqwszoa', 'template_r3xszxe', {
     from_name: formInput[2].value,
     subject: formInput[6].value,
     message: formInput[8].value,

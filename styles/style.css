@@ -725,7 +725,23 @@ html::-webkit-scrollbar-track:hover, html::-webkit-scrollbar-track:active {
   height: 300px;
 }
 
-.job-description .job-container-diseno__img {
+.job-description .job-container-diseno {
+  width: 90%;
+  height: 40vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.job-description .job-container-diseno .job-container__img {
+  -o-object-fit: contain;
+     object-fit: contain;
   width: 50%;
   height: 50%;
 }
@@ -837,7 +853,10 @@ html::-webkit-scrollbar-track:hover, html::-webkit-scrollbar-track:active {
 }
 
 .job-description .picture .container-picture--four .container-picture__img {
+  -o-object-fit: contain;
+     object-fit: contain;
   background-color: #fff;
+  margin-left: 2em;
   padding: 1em;
 }
 
@@ -852,6 +871,13 @@ html::-webkit-scrollbar-track:hover, html::-webkit-scrollbar-track:active {
   background-size: cover;
 }
 
+.job-description .picture .container-picture--five .container-picture__img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  width: 100%;
+  height: 100%;
+}
+
 .job-description .picture .container-picture--six {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
@@ -860,6 +886,31 @@ html::-webkit-scrollbar-track:hover, html::-webkit-scrollbar-track:active {
       -ms-flex-align: center;
           align-items: center;
   background-color: #d9f3b6;
+}
+
+.job-description .picture .container-picture--six .container-picture__img {
+  background-color: #fff;
+  -o-object-fit: contain;
+     object-fit: contain;
+  width: 300px;
+  height: 300px;
+}
+
+.job-description .picture .container-picture--seven {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #d9f3b6;
+}
+
+.job-description .picture .container-picture--seven .container-picture__img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 350px;
+  height: 300px;
 }
 
 .loading {
@@ -1090,9 +1141,16 @@ html::-webkit-scrollbar-track:hover, html::-webkit-scrollbar-track:active {
   .trabajos__bar {
     width: 18rem;
   }
-  .job-description .job .container__img {
-    width: 400px;
-    height: 400px;
+  .job-description .job-container {
+    width: 50%;
+    height: 100%;
+  }
+  .job-description .job-container__img {
+    width: 100%;
+    height: 100%;
+  }
+  .job-description .job-container-diseno {
+    height: 50vh;
   }
   .job-description .job__title {
     font-size: 32px;
@@ -1629,6 +1687,13 @@ html::-webkit-scrollbar-track:hover, html::-webkit-scrollbar-track:active {
     width: 100%;
     height: 100%;
   }
+  .job-description .job .job-container-diseno {
+    height: 85vh;
+  }
+  .job-description .job .job-container-diseno .job-container__img {
+    width: 250px;
+    height: 250px;
+  }
   .job-description .job__title {
     -ms-grid-row: 1;
     -ms-grid-row-span: 1;
@@ -1686,6 +1751,8 @@ html::-webkit-scrollbar-track:hover, html::-webkit-scrollbar-track:active {
     background-repeat: no-repeat;
   }
   .job-description .picture .container-picture--four .container-picture__img {
+    -o-object-fit: contain;
+       object-fit: contain;
     margin-right: 15vw;
     background-color: #fff;
     width: 30vw;
@@ -1705,11 +1772,22 @@ html::-webkit-scrollbar-track:hover, html::-webkit-scrollbar-track:active {
     height: 100%;
   }
   .job-description .picture .container-picture--six {
-    width: 40vw;
+    width: 100vw;
   }
   .job-description .picture .container-picture--six .container-picture__img {
-    width: 30vw;
-    height: 50%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    width: 60vw;
+    height: 100%;
+  }
+  .job-description .picture .container-picture--seven {
+    width: 40vw;
+  }
+  .job-description .picture .container-picture--seven .container-picture__img {
+    -o-object-fit: cover;
+       object-fit: cover;
+    width: 40vw;
+    height: 60%;
   }
 }
 /*# sourceMappingURL=style.css.map */

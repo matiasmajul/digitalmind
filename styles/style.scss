@@ -183,7 +183,7 @@ html {
       text-align: center;
       width: 100px;
       align-self: flex-end;
-      span{
+      span {
         font-family: cursive;
       }
     }
@@ -359,7 +359,8 @@ html {
           font-family: "Glacial Indifference", cursive;
           font-size: 10px;
 
-          &:active, &:focus{
+          &:active,
+          &:focus {
             color: $black;
           }
         }
@@ -468,8 +469,8 @@ html {
         border: 1px solid $secondary-color;
         background-color: $primary-color;
       }
-      &::placeholder{
-        color:rgba(255, 255, 255, 0.849);
+      &::placeholder {
+        color: rgba(255, 255, 255, 0.849);
       }
     }
 
@@ -555,8 +556,14 @@ html {
       background-color: $white;
       width: 90vw;
       height: 300px;
-      &-diseno{
-        &__img{
+      &-diseno {
+        width: 90%;
+        height: 40vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .job-container__img {
+          object-fit: contain;
           width: 50%;
           height: 50%;
         }
@@ -633,7 +640,10 @@ html {
       background-image: url("../images/d&c2.png");
       background-size: cover;
       .container-picture__img {
+        
+        object-fit: contain;
         background-color: $white;
+        margin-left: 2em;
         padding: 1em;
       }
     }
@@ -642,11 +652,32 @@ html {
       align-items: center;
       background-image: url("../images/d&c5.png");
       background-size: cover;
+      .container-picture__img {
+        object-fit: contain;
+        width: 100%;
+        height: 100%;
+      }
     }
     .container-picture--six {
       justify-content: flex-end;
       align-items: center;
       background-color: $secondary-color;
+      .container-picture__img {
+        background-color: $white;
+        object-fit: contain;
+        width: 300px;
+        height: 300px;
+      }
+    }
+    .container-picture--seven {
+      justify-content: flex-end;
+      align-items: center;
+      background-color: $secondary-color;
+      .container-picture__img {
+        object-fit: cover;
+        width: 350px;
+        height: 300px;
+      }
     }
   }
 }
@@ -880,10 +911,15 @@ html {
 
   .job-description {
     .job {
-      .container {
+      &-container {
+        width: 50%;
+        height: 100%;
         &__img {
-          width: 400px;
-          height: 400px;
+          width: 100%;
+          height: 100%;
+        }
+        &-diseno{
+          height: 50vh;
         }
       }
       &__title {
@@ -1011,7 +1047,6 @@ html {
       grid-area: 3 / 2 / 4 / 3;
       font-size: 50%;
       line-height: 38px;
-      
     }
     &__body {
       width: 90%;
@@ -1299,8 +1334,8 @@ html {
           border: 2px solid $primary-color;
           background-color: $white;
         }
-        &::placeholder{
-          color:rgb(84, 84, 84);
+        &::placeholder {
+          color: rgb(84, 84, 84);
         }
       }
       &__btn {
@@ -1345,6 +1380,13 @@ html {
         background-color: white;
         width: 100%;
         height: 100%;
+        &-diseno{
+          height: 85vh;
+          .job-container__img{
+            width: 250px;
+            height: 250px;
+          }
+        }
       }
       &__title {
         grid-area: 1 / 2 / 2 / 3;
@@ -1397,6 +1439,7 @@ html {
           background-size: 40vw 100vh;
           background-repeat: no-repeat;
           .container-picture__img {
+            object-fit: contain;
             margin-right: 15vw;
             background-color: $white;
             width: 30vw;
@@ -1415,10 +1458,19 @@ html {
           }
         }
         &--six {
+          width: 100vw;
+          .container-picture__img {
+            object-fit: cover;
+            width: 60vw;
+            height: 100%;
+          }
+        }
+        &--seven {
           width: 40vw;
           .container-picture__img {
-            width: 30vw;
-            height: 50%;
+            object-fit: cover;
+            width: 40vw;
+            height: 60%;
           }
         }
       }

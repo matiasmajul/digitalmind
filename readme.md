@@ -9,6 +9,8 @@ Página Web sobre Diseño digital, Community management y Fotografía
 - JAVASCRIPT
 
 ###  Pre-requisitos
+
+EMAIL JS 
 ```jsx
 $ npm install @emailjs/browser --save
 ```
@@ -20,3 +22,9 @@ HOSTING: https://somosdigitalmind.com.ar
 
 ![image](https://user-images.githubusercontent.com/37583685/164458372-da4ab3a8-d847-4ff4-b102-405fcb969567.png)
 
+
+
+
+
+
+⌨️ con ❤️ por [Matías Majul](https://github.com/matiasmajul) 😊
